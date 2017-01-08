@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortoFlipPizzaSystem", "PortoFlipPizzaSystem\PortoFlipPizzaSystem.csproj", "{D1023B78-4DD8-4C26-AB7D-ED82E65A6D07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortoFlipPizzaSystem.Data", "PortoFlipPizzaSystem.Data\PortoFlipPizzaSystem.Data.csproj", "{5F317836-447C-4E57-B15B-0D7B6CEC609E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1023B78-4DD8-4C26-AB7D-ED82E65A6D07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1023B78-4DD8-4C26-AB7D-ED82E65A6D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1023B78-4DD8-4C26-AB7D-ED82E65A6D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1023B78-4DD8-4C26-AB7D-ED82E65A6D07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F317836-447C-4E57-B15B-0D7B6CEC609E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F317836-447C-4E57-B15B-0D7B6CEC609E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F317836-447C-4E57-B15B-0D7B6CEC609E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F317836-447C-4E57-B15B-0D7B6CEC609E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
