@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D1023B78-4DD8-4C26-AB7D-ED82E65A6D07}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{F091D97A-A698-4C7A-95CC-EE2AEAAAB79E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PortoFlipPizzaSystem</RootNamespace>
-    <AssemblyName>PortoFlipPizzaSystem</AssemblyName>
+    <RootNamespace>ProtoFlipPizzaSystem.ConsoleClient</RootNamespace>
+    <AssemblyName>ProtoFlipPizzaSystem.ConsoleClient</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,18 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\App.cs" />
-    <Compile Include="Core\CommandHandler.cs" />
-    <Compile Include="Core\Contracts\ICommandHandler.cs" />
+    <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PortoFlipPizzaSystem.Data\PortoFlipPizzaSystem.Data.csproj">
-      <Project>{5f317836-447c-4e57-b15b-0d7b6cec609e}</Project>
-      <Name>PortoFlipPizzaSystem.Data</Name>
+    <ProjectReference Include="..\PortoFlipPizzaSystem\PortoFlipPizzaSystem.csproj">
+      <Project>{D1023B78-4DD8-4C26-AB7D-ED82E65A6D07}</Project>
+      <Name>PortoFlipPizzaSystem</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

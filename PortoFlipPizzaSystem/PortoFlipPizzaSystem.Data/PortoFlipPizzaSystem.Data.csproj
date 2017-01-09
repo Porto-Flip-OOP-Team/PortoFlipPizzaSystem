@@ -43,7 +43,12 @@
     <Compile Include="Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ProtoFlipPizzaSystem.Models\ProtoFlipPizzaSystem.Models.csproj">
+      <Project>{73c74a20-e126-4fc6-bfa2-8609f3cc6c65}</Project>
+      <Name>ProtoFlipPizzaSystem.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
