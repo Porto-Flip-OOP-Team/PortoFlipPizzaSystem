@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator\Contacts\IDrink.cs" />
+    <Compile Include="Administrator\Contacts\IFood.cs" />
     <Compile Include="Administrator\Contacts\IIgredient.cs" />
     <Compile Include="Administrator\Contacts\IMenu.cs" />
     <Compile Include="Administrator\Contacts\IProduct.cs" />
