@@ -52,9 +52,9 @@
     <Compile Include="Administrator\Contracts\IMenu.cs" />
     <Compile Include="Administrator\Contracts\IPerson.cs" />
     <Compile Include="Administrator\Contracts\IProduct.cs" />
-    <Compile Include="Administrator\Enums\UnitType.cs" />
     <Compile Include="Client\Contracts\ICustomer.cs" />
     <Compile Include="Client\Contracts\IOrder.cs" />
+    <Compile Include="Enums\UnitType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
