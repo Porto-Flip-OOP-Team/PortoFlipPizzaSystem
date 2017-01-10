@@ -54,6 +54,7 @@
     <Compile Include="Administrator\Contracts\IProduct.cs" />
     <Compile Include="Client\Contracts\ICustomer.cs" />
     <Compile Include="Client\Contracts\IOrder.cs" />
+    <Compile Include="Client\Order\Order.cs" />
     <Compile Include="Enums\UnitType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
