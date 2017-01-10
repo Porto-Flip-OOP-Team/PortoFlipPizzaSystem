@@ -46,12 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrator\Contacts\IDrink.cs" />
-    <Compile Include="Administrator\Contacts\IFood.cs" />
-    <Compile Include="Administrator\Contacts\IIgredient.cs" />
-    <Compile Include="Administrator\Contacts\IMenu.cs" />
-    <Compile Include="Administrator\Contacts\IProduct.cs" />
+    <Compile Include="Administrator\Contracts\IDrink.cs" />
+    <Compile Include="Administrator\Contracts\IFood.cs" />
+    <Compile Include="Administrator\Contracts\IIgredient.cs" />
+    <Compile Include="Administrator\Contracts\IMenu.cs" />
     <Compile Include="Administrator\Contracts\IPerson.cs" />
+    <Compile Include="Administrator\Contracts\IProduct.cs" />
+    <Compile Include="Administrator\Enums\UnitType.cs" />
     <Compile Include="Client\Contracts\ICustomer.cs" />
     <Compile Include="Client\Contracts\IOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Administrator\Abstract\" />
+    <Folder Include="Administrator\Contacts\" />
     <Folder Include="Client\Abstract\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
