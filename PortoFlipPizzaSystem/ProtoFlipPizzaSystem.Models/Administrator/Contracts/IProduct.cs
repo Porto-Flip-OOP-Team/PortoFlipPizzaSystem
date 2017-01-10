@@ -8,5 +8,6 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Contacts
 {
     interface IProduct
     {
+        int calculatePrice();
     }
 }
