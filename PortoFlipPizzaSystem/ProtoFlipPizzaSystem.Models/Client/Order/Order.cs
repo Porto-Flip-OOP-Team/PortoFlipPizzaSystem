@@ -16,8 +16,8 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
 
         public Order(IProduct product, int quantity)
         {
-            this.product = product;
-            this.quantity = quantity;
+            this.Product = product;
+            this.Quantity = quantity;
         }
 
         public IProduct Product
@@ -25,6 +25,11 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
             get
             {
                 return this.product;
+            }
+            set
+            {
+                //Some validation whether the product exists in the menu
+                this.product = value;
             }
         }
 
@@ -37,7 +42,7 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
 
             set
             {
-                if (quantity <= 0)
+                if (value <= 0)
                 {
                     throw new ArgumentOutOfRangeException("The quantity of product must be a positive number");
                 }
