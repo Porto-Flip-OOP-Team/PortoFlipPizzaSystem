@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 using PortoFlipPizzaSystem.Core;
 
+
 namespace ProtoFlipPizzaSystem.ConsoleClient
 {
     class Startup
     {
         static void Main()
         {
+
             var app = new App();
             app.RunProgram();
+
         }
     }
 }

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProtoFlipPizzaSystem.Models.Client.Contracts
+namespace ProtoFlipPizzaSystem.Models.Enums
 {
-    interface ICustomer
+    public enum TypeWorkPosition
     {
+        Waiter,
+        Driver
     }
 }

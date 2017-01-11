@@ -54,6 +54,10 @@
       <Project>{D1023B78-4DD8-4C26-AB7D-ED82E65A6D07}</Project>
       <Name>PortoFlipPizzaSystem</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ProtoFlipPizzaSystem.Models\ProtoFlipPizzaSystem.Models.csproj">
+      <Project>{73C74A20-E126-4FC6-BFA2-8609F3CC6C65}</Project>
+      <Name>ProtoFlipPizzaSystem.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
