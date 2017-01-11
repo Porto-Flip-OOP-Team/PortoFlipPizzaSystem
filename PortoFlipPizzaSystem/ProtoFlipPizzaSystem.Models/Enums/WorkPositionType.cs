@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProtoFlipPizzaSystem.Models.Enums
 {
-    public enum TypeWorkPosition
+    public enum WorkPositionType
     {
         Waiter,
         Driver

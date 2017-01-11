@@ -11,7 +11,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
 {
     public class Staff : Person, IStaff
     {
-        public Staff(string firstName, string lastName, string address, double salary, TypeWorkPosition position)
+        public Staff(string firstName, string lastName, string address, double salary, WorkPositionType position)
                                         : base(firstName, lastName, address)
         {
             this.Salary = salary;
@@ -19,7 +19,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
         }
 
         public double Salary { get; private set; }
-        public TypeWorkPosition WorkPosition { get; private set; }
+        public WorkPositionType WorkPosition { get; private set; }
 
         public void UpdateSalary(double newSalary)
         {

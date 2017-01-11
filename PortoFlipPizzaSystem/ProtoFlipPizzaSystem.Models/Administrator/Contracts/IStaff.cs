@@ -10,7 +10,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
     public interface IStaff : IPerson
     {
         double Salary { get; }
-        TypeWorkPosition WorkPosition { get; }
+        WorkPositionType WorkPosition { get; }
 
         void UpdateSalary(double newSalary);
     }

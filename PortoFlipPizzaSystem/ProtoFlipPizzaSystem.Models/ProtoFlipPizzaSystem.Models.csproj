@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="Administrator\Abstract\Person.cs" />
     <Compile Include="Administrator\Customer.cs" />
-    <Compile Include="Enums\TypeWorkPosition.cs" />
+    <Compile Include="Enums\WorkPositionType.cs" />
     <Compile Include="Administrator\Staff.cs" />
     <Compile Include="Administrator\Contracts\ICustomer.cs" />
     <Compile Include="Administrator\Contracts\IDrink.cs" />
