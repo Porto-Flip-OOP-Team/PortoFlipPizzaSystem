@@ -12,5 +12,8 @@ namespace ProtoFlipPizzaSystem.Models.Client.Contracts
         IProduct Product { get; }
         int Quantity { get; set; }
         double TotalProductPrice { get; }
+
+        double CalculateTotalOrderPrice(List<IOrder> order);
+        
     }
 }

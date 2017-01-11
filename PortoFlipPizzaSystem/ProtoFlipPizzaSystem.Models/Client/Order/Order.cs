@@ -52,5 +52,15 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
                 return Product.calculatePrice() * quantity;
             }
         }
+
+        public double CalculateTotalOrderPrice(List<IOrder> order)
+        {
+            double sum = 0;
+            foreach (var element in order)
+            {
+                sum += element.TotalProductPrice;
+            }
+            return sum;
+        }
     }
 }
