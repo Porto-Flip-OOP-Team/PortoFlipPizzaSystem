@@ -9,9 +9,9 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 {
     public interface IStaff : IPerson
     {
-        double Salary { get; }
+        decimal Salary { get; }
         WorkPositionType WorkPosition { get; }
 
-        void UpdateSalary(double newSalary);
+        void UpdateSalary(decimal newSalary);
     }
 }

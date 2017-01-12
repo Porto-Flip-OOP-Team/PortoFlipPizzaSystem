@@ -10,18 +10,26 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
 {
     public class Customer : Person, ICustomer
     {
-        private const double MAX_DISCOUNT = 20;
-        private double discount;
+        private const decimal MAX_DISCOUNT = 20;
+        private decimal discount;
         public Customer(string firstName, string lastName, string address) : base(firstName, lastName, address)
         {
         }
 
-        public Customer(string firstName, string lastName, string address, double discount) : base(firstName, lastName, address)
+        public Customer(string idPerson, string firstName, string lastName, string address) : base(idPerson, firstName, lastName, address)
+        {
+        }
+
+        public Customer(string firstName, string lastName, string address, decimal discount) : base(firstName, lastName, address)
+        {
+            this.Discount = discount;
+        }
+        public Customer(string idPerson, string firstName, string lastName, string address, decimal discount) : base(idPerson, firstName, lastName, address)
         {
             this.Discount = discount;
         }
 
-        public double Discount
+        public decimal Discount
         {
             get
             {
