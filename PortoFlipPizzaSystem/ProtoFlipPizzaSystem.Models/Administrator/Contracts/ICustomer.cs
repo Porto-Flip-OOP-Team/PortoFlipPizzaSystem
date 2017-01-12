@@ -8,7 +8,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 {
     public interface ICustomer : IPerson
     {
-        double Discount { get; }
+        decimal Discount { get; }
         int NumberOfOrders { get; }
     }
 }

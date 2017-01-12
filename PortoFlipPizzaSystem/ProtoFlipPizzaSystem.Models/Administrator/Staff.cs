@@ -11,17 +11,23 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
 {
     public class Staff : Person, IStaff
     {
-        public Staff(string firstName, string lastName, string address, double salary, WorkPositionType position)
+        public Staff(string firstName, string lastName, string address, decimal salary, WorkPositionType position)
                                         : base(firstName, lastName, address)
         {
             this.Salary = salary;
             this.WorkPosition = position;
         }
+        public Staff(string idPerson,string firstName, string lastName, string address, decimal salary, WorkPositionType position)
+                                        : base(idPerson,firstName, lastName, address)
+        {
+            this.Salary = salary;
+            this.WorkPosition = position;
+        }
 
-        public double Salary { get; private set; }
+        public decimal Salary { get; private set; }
         public WorkPositionType WorkPosition { get; private set; }
 
-        public void UpdateSalary(double newSalary)
+        public void UpdateSalary(decimal newSalary)
         {
             this.Salary = newSalary;
         }

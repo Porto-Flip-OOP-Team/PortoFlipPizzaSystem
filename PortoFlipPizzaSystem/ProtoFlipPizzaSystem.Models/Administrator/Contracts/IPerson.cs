@@ -12,5 +12,8 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
         string FirstName { get; }
         string LastName { get; }
         string Address { get; }
+        bool IsDeleted { get; }
+
+        void Delete();
     }
 }
