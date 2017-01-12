@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProtoFlipPizzaSystem.Models.Administrator.Contacts;
+using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
 
 namespace ProtoFlipPizzaSystem.Models.Client.Order
 {
@@ -50,7 +50,7 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
             }
         }
 
-        public double TotalProductPrice
+        public decimal TotalProductPrice
         {
             get
             {
@@ -58,9 +58,9 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
             }
         }
 
-        public double CalculateTotalOrderPrice(List<IOrder> order)
+          public decimal CalculateTotalOrderPrice(List<IOrder> order)
         {
-            double sum = 0;
+            decimal sum = 0;
             foreach (var element in order)
             {
                 sum += element.TotalProductPrice;

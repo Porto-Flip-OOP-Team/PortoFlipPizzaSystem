@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProtoFlipPizzaSystem.Models.Enums
 {
-    public enum UnitType
+    public enum MeasureUnitType
     {
         Gram,
         Kilogram,

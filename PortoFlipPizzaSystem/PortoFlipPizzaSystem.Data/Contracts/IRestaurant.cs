@@ -1,0 +1,31 @@
+﻿namespace PortoFlipPizzaSystem.Data.Contracts
+{
+    public interface IRestaurant :
+        IAddOrder,
+        IGetOrder,
+        IRemoveOrder,
+        IUpdateOrder,
+        IGetAllOrders,
+        IAddIngredient,
+        IGetIngredient,
+        IRemoveIngredient,
+        IUpdateIngredient,
+        IGetAllIngredients,
+        IAddProduct,
+        IGetProduct,
+        IRemoveProduct,
+        IUpdateProduct,
+        IGetAllProducts,
+        IAddCustomer,
+        IGetCustomer,
+        IRemoveCustomer,
+        IUpdateCustomer,
+        IGetAllCustomer,
+        IAddStaff,
+        IGetStaff,
+        IRemoveStaff,
+        IUpdateStaff,
+        IGetAllStaff
+    {
+    }
+}

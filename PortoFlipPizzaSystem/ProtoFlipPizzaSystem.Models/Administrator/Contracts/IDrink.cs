@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProtoFlipPizzaSystem.Models.Administrator.Contacts
+namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 {
     interface IDrink : IProduct
     {

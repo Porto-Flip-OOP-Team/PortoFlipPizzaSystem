@@ -60,7 +60,7 @@
     <Compile Include="Administrator\Contracts\IStaff.cs" />
     <Compile Include="Client\Contracts\IOrder.cs" />
     <Compile Include="Client\Order\Order.cs" />
-    <Compile Include="Enums\UnitType.cs" />
+    <Compile Include="Enums\MeasureUnitType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
