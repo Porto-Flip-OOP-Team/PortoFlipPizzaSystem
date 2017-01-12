@@ -40,8 +40,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IAddCustomer.cs" />
+    <Compile Include="Contracts\IAddIngredient.cs" />
+    <Compile Include="Contracts\IAddOrder.cs" />
+    <Compile Include="Contracts\IAddProduct.cs" />
+    <Compile Include="Contracts\IAddStaff.cs" />
+    <Compile Include="Contracts\IGetAllCustomer.cs" />
+    <Compile Include="Contracts\IGetAllIngredients.cs" />
+    <Compile Include="Contracts\IGetAllOrders.cs" />
+    <Compile Include="Contracts\IGetAllProducts.cs" />
+    <Compile Include="Contracts\IGetAllStaff.cs" />
+    <Compile Include="Contracts\IGetCustomer.cs" />
+    <Compile Include="Contracts\IGetIngredient.cs" />
+    <Compile Include="Contracts\IGetOrder.cs" />
+    <Compile Include="Contracts\IGetProduct.cs" />
+    <Compile Include="Contracts\IGetStaff.cs" />
+    <Compile Include="Contracts\IRemoveCustomer.cs" />
+    <Compile Include="Contracts\IRemoveIngredient.cs" />
+    <Compile Include="Contracts\IRemoveOrder.cs" />
+    <Compile Include="Contracts\IRemoveProduct.cs" />
+    <Compile Include="Contracts\IRemoveStaff.cs" />
+    <Compile Include="Contracts\IRestaurant.cs" />
+    <Compile Include="Contracts\IUpdateCustomer.cs" />
+    <Compile Include="Contracts\IUpdateIngredient.cs" />
+    <Compile Include="Contracts\IUpdateOrder.cs" />
+    <Compile Include="Contracts\IUpdateProduct.cs" />
+    <Compile Include="Contracts\IUpdateStaff.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Restaurant.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProtoFlipPizzaSystem.Models\ProtoFlipPizzaSystem.Models.csproj">

@@ -1,19 +1,18 @@
-﻿using ProtoFlipPizzaSystem.Models.Administrator.Contacts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+
+using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
 
 namespace ProtoFlipPizzaSystem.Models.Client.Contracts
 {
-    interface IOrder
+    public interface IOrder
     {
         IProduct Product { get; }
-        int Quantity { get; set; }
-        double TotalProductPrice { get; }
 
-        double CalculateTotalOrderPrice(List<IOrder> order);
-        
+        int Quantity { get; set; }
+
+        decimal TotalProductPrice { get; }
+
+        decimal CalculateTotalOrderPrice(List<IOrder> order);
+
     }
 }
