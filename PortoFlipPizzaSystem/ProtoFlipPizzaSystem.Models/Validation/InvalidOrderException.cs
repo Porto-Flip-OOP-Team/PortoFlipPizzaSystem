@@ -2,11 +2,10 @@
 
 namespace ProtoFlipPizzaSystem.Models.Validation
 {
-    public class CustomeException : ApplicationException
+    public class InvalidOrderException : ApplicationException
     {
-        public CustomeException(string msg) : base(msg)
+        public InvalidOrderException(string msg) : base(msg)
         {
-
         }
     }
 }
