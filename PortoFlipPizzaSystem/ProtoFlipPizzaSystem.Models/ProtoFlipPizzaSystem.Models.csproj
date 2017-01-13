@@ -49,6 +49,7 @@
     <Compile Include="Administrator\Abstract\Person.cs" />
     <Compile Include="Administrator\Customer.cs" />
     <Compile Include="Administrator\Structures\ProductItem.cs" />
+    <Compile Include="Client\Order\OnlineOrder.cs" />
     <Compile Include="Client\Structures\OrderItem.cs" />
     <Compile Include="Enums\WorkPositionType.cs" />
     <Compile Include="Administrator\Staff.cs" />

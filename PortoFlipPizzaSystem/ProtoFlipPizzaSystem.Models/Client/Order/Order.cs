@@ -20,6 +20,8 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
             this.Quantity = quantity;
         }
 
+        public bool IsDeleted { get; private set; } = false;
+
         public IProduct Product
         {
             get
@@ -40,7 +42,7 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
                 return this.quantity;
             }
 
-            set
+            private set
             {
                 if (value <= 0)
                 {
@@ -66,6 +68,11 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
                 sum += element.TotalProductPrice;
             }
             return sum;
+        }
+
+        public void Delete()
+        {
+            this.IsDeleted = true;
         }
     }
 }
