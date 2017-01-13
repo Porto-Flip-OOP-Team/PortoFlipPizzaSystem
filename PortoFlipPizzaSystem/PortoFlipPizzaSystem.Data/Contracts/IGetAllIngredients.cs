@@ -6,6 +6,6 @@ namespace PortoFlipPizzaSystem.Data.Contracts
 {
     public interface IGetAllIngredients
     {
-        ICollection<IIgredient> GetAllIngredients();
+        ICollection<IIngredient> GetAllIngredients();
     }
 }

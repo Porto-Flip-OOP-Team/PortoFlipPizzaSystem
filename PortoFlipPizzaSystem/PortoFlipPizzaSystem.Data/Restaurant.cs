@@ -13,7 +13,7 @@ namespace PortoFlipPizzaSystem.Data
         private static readonly Lazy<Restaurant> Lazy = new Lazy<Restaurant>(() => new Restaurant());
 
         private Dictionary<int, ICustomer> customers;
-        private Dictionary<int, IIgredient> ingredients;
+        private Dictionary<int, IIngredient> ingredients;
         private Dictionary<int, IOrder> orders;
         private Dictionary<int, IProduct> products;
         private Dictionary<int, IStaff> staff;
@@ -21,7 +21,7 @@ namespace PortoFlipPizzaSystem.Data
         private Restaurant()
         {
             this.customers = new Dictionary<int, ICustomer>();
-            this.ingredients = new Dictionary<int, IIgredient>();
+            this.ingredients = new Dictionary<int, IIngredient>();
             this.orders = new Dictionary<int, IOrder>();
             this.products = new Dictionary<int, IProduct>();
             this.staff = new Dictionary<int, IStaff>();
@@ -40,7 +40,7 @@ namespace PortoFlipPizzaSystem.Data
             throw new NotImplementedException();
         }
 
-        public void AddIngredient(int ingredientId, IIgredient ingredient)
+        public void AddIngredient(int ingredientId, IIngredient ingredient)
         {
             throw new NotImplementedException();
         }
@@ -65,7 +65,7 @@ namespace PortoFlipPizzaSystem.Data
             throw new NotImplementedException();
         }
 
-        public ICollection<IIgredient> GetAllIngredients()
+        public ICollection<IIngredient> GetAllIngredients()
         {
             throw new NotImplementedException();
         }
@@ -90,7 +90,7 @@ namespace PortoFlipPizzaSystem.Data
             throw new NotImplementedException();
         }
 
-        public IIgredient GetIngredient(int ingredientId)
+        public IIngredient GetIngredient(int ingredientId)
         {
             throw new NotImplementedException();
         }

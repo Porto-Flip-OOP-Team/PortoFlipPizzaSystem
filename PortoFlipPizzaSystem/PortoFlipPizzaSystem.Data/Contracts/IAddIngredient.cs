@@ -4,6 +4,6 @@ namespace PortoFlipPizzaSystem.Data.Contracts
 {
     public interface IAddIngredient
     {
-        void AddIngredient(int ingredientId, IIgredient ingredient);
+        void AddIngredient(int ingredientId, IIngredient ingredient);
     }
 }

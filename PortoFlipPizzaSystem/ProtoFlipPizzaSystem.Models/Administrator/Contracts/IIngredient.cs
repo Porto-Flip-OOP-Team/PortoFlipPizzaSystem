@@ -2,7 +2,7 @@
 
 namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 {
-    public interface IIgredient
+    public interface IIngredient
     {
         string Name { get; }
 
