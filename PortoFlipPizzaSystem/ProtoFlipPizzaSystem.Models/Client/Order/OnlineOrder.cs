@@ -11,13 +11,16 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
     {
         public OnlineOrder(IProduct product, int quantity) : base(product, quantity)
         {
+            this.Time = DateTime.Now;
         }
 
-        public OnlineOrder(string comment, IProduct product, int quantity) : base(product, quantity)
+        public OnlineOrder(IProduct product, int quantity, string comment) : base(product, quantity)
         {
             this.Comment = comment;
+            this.Time = DateTime.Now;
         }
 
         public string Comment { get; private set; }
+        public DateTime Time { get; private set; }
     }
 }
