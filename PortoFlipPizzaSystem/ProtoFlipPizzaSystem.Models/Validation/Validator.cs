@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+using ProtoFlipPizzaSystem.Models.Client.Contracts;
+using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace ProtoFlipPizzaSystem.Models.Validation
@@ -65,7 +68,7 @@ namespace ProtoFlipPizzaSystem.Models.Validation
         }
 
         /// <summary>
-        /// Checks if the ordered products or not zero or negative number
+        /// Checks if the number of ordered products is not zero or negative number
         /// </summary>
         /// <param name="value">the number of ordered products</param>
         /// <param name="message">the exception message</param>
@@ -74,6 +77,20 @@ namespace ProtoFlipPizzaSystem.Models.Validation
             if (value <= 0)
             {
                 throw new InvalidOrderQuantityException(message);
+            }
+        }
+
+        /// <summary>
+        /// Checks if the ordered product is listed in the menu
+        /// </summary>
+        /// <param name="list">list of all products in the menu</param>
+        /// <param name="product">ordered product</param>
+        /// <param name="message">the exception message</param>
+        public static void ValidateMenuItem(IList<IProduct> list, IProduct product, string message)
+        {
+            if (!list.Contains(product))
+            {
+                throw new InvalidMenuItemException(message);
             }
         }
     }
