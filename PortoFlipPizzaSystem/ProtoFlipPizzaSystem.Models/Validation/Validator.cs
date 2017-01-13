@@ -63,5 +63,18 @@ namespace ProtoFlipPizzaSystem.Models.Validation
                 throw new ArgumentException(message);
             }
         }
+
+        /// <summary>
+        /// Checks if the ordered products or not zero or negative number
+        /// </summary>
+        /// <param name="value">the number of ordered products</param>
+        /// <param name="message">the exception message</param>
+        public static void ValidateOrder(int value, string message)
+        {
+            if (value <= 0)
+            {
+                throw new InvalidOrderException(message);
+            }
+        }
     }
 }
