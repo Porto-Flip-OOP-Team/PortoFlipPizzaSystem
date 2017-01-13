@@ -17,8 +17,8 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
             this.Salary = salary;
             this.WorkPosition = position;
         }
-        public Staff(string idPerson,string firstName, string lastName, string address, decimal salary, WorkPositionType position)
-                                        : base(idPerson,firstName, lastName, address)
+        public Staff(int idPerson, string firstName, string lastName, string address, decimal salary, WorkPositionType position)
+                                        : base(idPerson, firstName, lastName, address)
         {
             this.Salary = salary;
             this.WorkPosition = position;
@@ -31,9 +31,6 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
         {
             this.Salary = newSalary;
         }
-        protected override string GetPrefix()
-        {
-            return "EM";
-        }
+
     }
 }

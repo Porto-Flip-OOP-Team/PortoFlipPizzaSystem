@@ -2,7 +2,7 @@
 {
     public interface IPerson
     {
-        string IdPerson { get; }
+        int IdPerson { get; }
         string FirstName { get; }
         string LastName { get; }
         string Address { get; }

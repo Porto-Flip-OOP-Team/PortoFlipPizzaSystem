@@ -11,7 +11,6 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
     public abstract class Person : IPerson
     {
         protected static int idCounter = 1;
-        protected string idPerson;
 
         public Person(string firstName, string lastName, string address)
         {
@@ -21,7 +20,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
             this.Address = address;
         }
 
-        public Person(string idPerson, string firstName, string lastName, string address)
+        public Person(int idPerson, string firstName, string lastName, string address)
         {
             this.IdPerson = idPerson;
             this.IdPerson = this.GenerateId();
@@ -30,26 +29,8 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
             this.Address = address;
         }
 
-        protected string IdPrefix
-        {
-            get
-            {
-                return this.GetPrefix();
-            }
 
-        }
-
-        public string IdPerson
-        {
-            get
-            {
-                return this.idPerson;
-            }
-            private set
-            {
-                this.idPerson = value;
-            }
-        }
+        public int IdPerson { get; private set; }
 
         public bool IsDeleted { get; private set; } = false;
 
@@ -57,11 +38,10 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
         public string LastName { get; private set; }
         public string Address { get; private set; }
 
-        protected abstract string GetPrefix();
 
-        protected virtual string GenerateId()
+        protected virtual int GenerateId()
         {
-            return this.IdPrefix + (idCounter++).ToString().PadLeft(6, '0');
+            return idCounter++;
         }
 
         public void Delete()

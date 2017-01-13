@@ -16,7 +16,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
         {
         }
 
-        public Customer(string idPerson, string firstName, string lastName, string address) : base(idPerson, firstName, lastName, address)
+        public Customer(int idPerson, string firstName, string lastName, string address) : base(idPerson, firstName, lastName, address)
         {
         }
 
@@ -24,7 +24,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
         {
             this.Discount = discount;
         }
-        public Customer(string idPerson, string firstName, string lastName, string address, decimal discount) : base(idPerson, firstName, lastName, address)
+        public Customer(int idPerson, string firstName, string lastName, string address, decimal discount) : base(idPerson, firstName, lastName, address)
         {
             this.Discount = discount;
         }
@@ -49,9 +49,5 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
         }
         public int NumberOfOrders { get; private set; }
 
-        protected override string GetPrefix()
-        {
-            return "CL";
-        }
     }
 }
