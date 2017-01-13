@@ -69,11 +69,11 @@ namespace ProtoFlipPizzaSystem.Models.Validation
         /// </summary>
         /// <param name="value">the number of ordered products</param>
         /// <param name="message">the exception message</param>
-        public static void ValidateOrder(int value, string message)
+        public static void ValidateOrderQuantity(int value, string message)
         {
             if (value <= 0)
             {
-                throw new InvalidOrderException(message);
+                throw new InvalidOrderQuantityException(message);
             }
         }
     }

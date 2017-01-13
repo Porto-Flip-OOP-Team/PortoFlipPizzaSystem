@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+using ProtoFlipPizzaSystem.Models.Validation;
 
 namespace ProtoFlipPizzaSystem.Models.Client.Order
 {
@@ -42,10 +43,6 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
 
             set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentOutOfRangeException("The quantity of product must be a positive number");
-                }
                 this.quantity = value;
             }
         }
