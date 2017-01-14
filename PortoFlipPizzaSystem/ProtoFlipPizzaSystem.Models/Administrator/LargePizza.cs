@@ -20,7 +20,10 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
         {
 
         }
+        public LargePizza(int id, string name, List<ProductItem> ingredients) : base(id, name, ingredients)
+        {
 
+        }
 
         public override string ToString()
         {

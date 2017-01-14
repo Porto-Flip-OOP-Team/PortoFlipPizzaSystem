@@ -6,7 +6,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
     {
         string Name { get; }
         bool IsDeleted { get; }
-
+        int IdProduct { get; }
         decimal CalculatePrice();
     }
 }

@@ -14,6 +14,11 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
             this.Price = price;
             this.Quantity = quantity;
         }
+        public Drink(int id, string name, decimal price, MeasureUnitType quantity) : base(id, name)
+        {
+            this.Price = price;
+            this.Quantity = quantity;
+        }
 
 
         private decimal Price { get; set; }
