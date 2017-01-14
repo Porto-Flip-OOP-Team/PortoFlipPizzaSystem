@@ -19,7 +19,10 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
         {
             this.Coeff = 0.1M;
         }
-
+        public MiddlePizza(int id, string name, List<ProductItem> ingredients) : base(id, name, ingredients)
+        {
+            this.Coeff = 0.1M;
+        }
 
         public override string ToString()
         {

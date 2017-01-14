@@ -15,6 +15,10 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
         {
 
         }
+        public Pizza(int id, string name, List<ProductItem> ingredients) : base(id, name, ingredients)
+        {
+
+        }
 
         public decimal PizzaPremium { get; private set; } = 1.2M;
         public decimal Coeff { get; protected set; } = 0;
