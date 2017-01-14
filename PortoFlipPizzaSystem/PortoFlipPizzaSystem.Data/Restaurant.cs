@@ -256,10 +256,20 @@ namespace PortoFlipPizzaSystem.Data
         public void UpdateIngredient(int ingredientID, decimal quantity)
         {
             // To think about
-           // this.ingredients[ingredientID].Quantity += quantity;
+            // this.ingredients[ingredientID].Quantity += quantity;
         }
 
         public void UpdateStuff(int stuffId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateOrder(int orderId, IProduct product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateQuantity(int ingredientID, decimal quantity)
         {
             throw new NotImplementedException();
         }

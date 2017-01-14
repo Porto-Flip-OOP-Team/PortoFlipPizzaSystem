@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 {
-    public interface IFood : IProduct
+    public interface IPasta : IFood
     {
-        void AddIngredient(decimal quantity, IIngredient ingredient);
-        void RemoveIngredient(IIngredient ingredient);
+
+        decimal PastaPremium { get; }
+
+        void SetPastaPremium(decimal pastaPremium);
     }
 }

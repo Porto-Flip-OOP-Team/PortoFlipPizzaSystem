@@ -50,10 +50,13 @@
     <Compile Include="Administrator\Abstract\Person.cs" />
     <Compile Include="Administrator\Abstract\Pizza.cs" />
     <Compile Include="Administrator\Abstract\Product.cs" />
+    <Compile Include="Administrator\Contracts\IPasta.cs" />
     <Compile Include="Administrator\Contracts\IPizza.cs" />
     <Compile Include="Administrator\Customer.cs" />
+    <Compile Include="Administrator\Drink.cs" />
     <Compile Include="Administrator\LargePizza.cs" />
     <Compile Include="Administrator\MiddlePizza.cs" />
+    <Compile Include="Administrator\Pasta.cs" />
     <Compile Include="Administrator\SmallPizza.cs" />
     <Compile Include="Administrator\Structures\ProductItem.cs" />
     <Compile Include="Client\Order\OfflineOrder.cs" />

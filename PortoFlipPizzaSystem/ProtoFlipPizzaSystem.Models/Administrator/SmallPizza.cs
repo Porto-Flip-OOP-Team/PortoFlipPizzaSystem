@@ -7,42 +7,29 @@ using System.Threading.Tasks;
 
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
 using ProtoFlipPizzaSystem.Models.Administrator.Abstract;
-
+using ProtoFlipPizzaSystem.Models.Administrator.Structures;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator
 {
     public class SmallPizza : Pizza, IPizza
     {
-        private const decimal premium = 0.15M;
-        private const decimal quantityOfProduct = 1M;
-        public const int numberOfSlices = 6;
 
-        public SmallPizza(string name, List<IIngredient> ingredients) : base(name, ingredients)
+        public const int NUMBER_OF_SLICES = 6;
+
+        public SmallPizza(string name, List<ProductItem> ingredients) : base(name, ingredients)
         {
-
+            this.Coeff = 0.3M;
         }
 
-        public override string Visualise()
+        public override string ToString()
         {
-            string visualization = "Small " + Name
-                                            + "\n" + numberOfSlices + "slices"
-                                            + "\nPrice: " + CalculatePrice();
+            StringBuilder visualization = new StringBuilder();
+            visualization.AppendLine($"Small {this.Name}");
+            visualization.AppendLine($"{NUMBER_OF_SLICES} slices");
+            visualization.Append($"Price: {this.CalculatePrice()}");
 
-            return visualization;
+            return visualization.ToString();
         }
 
-        public override decimal CalculatePrice()
-        {
-            decimal price = 0;
-
-            foreach (var ingredient in Ingredients)
-            {
-                price += (ingredient.TotalPrice * quantityOfProduct);
-            }
-
-            price += (price * premium);
-
-            return price;
-        }
     }
 }

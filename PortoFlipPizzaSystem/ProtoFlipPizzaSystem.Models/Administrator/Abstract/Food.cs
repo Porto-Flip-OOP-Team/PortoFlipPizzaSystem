@@ -5,31 +5,28 @@ using System.Text;
 using System.Threading.Tasks;
 
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
-
+using ProtoFlipPizzaSystem.Models.Administrator.Structures;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
 {
     public abstract class Food : Product, IFood
     {
-        private List<IIngredient> ingredients;
-
-        public Food(List<IIngredient> ingredients)
+        public Food(string name, List<ProductItem> ingredients) : base(name)
         {
             this.Ingredients = ingredients;
         }
 
-        public List<IIngredient> Ingredients { get; private set; }
+        public List<ProductItem> Ingredients { get; private set; }
 
-        public void AddIngredient(IIngredient ingredient)
+        public void AddIngredient(decimal quantity, IIngredient ingredient)
         {
-            this.ingredients.Add(ingredient);
+            this.Ingredients.Add(new ProductItem(ingredient, quantity));
         }
 
         public void RemoveIngredient(IIngredient ingredient)
         {
-            this.ingredients.Remove(ingredient);
+            int index = this.Ingredients.FindIndex(item => item.Igredient.Name.Equals(ingredient.Name));
+            this.Ingredients.RemoveAt(index);
         }
-
-        public abstract decimal CalculatePrice();
     }
 }
