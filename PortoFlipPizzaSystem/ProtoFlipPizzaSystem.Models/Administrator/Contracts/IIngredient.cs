@@ -8,11 +8,13 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 
         MeasureUnitType UnitType { get; }
 
-        decimal CalculateUnitPrice();
+        decimal CalculateIngredientPrice();
 
-        decimal TotalPrice { get; }
+        decimal UnitPrice { get; }
 
         decimal Quantity { get; }
+        
+        bool IsDeleted { get; }
 
         void Delete();
     }

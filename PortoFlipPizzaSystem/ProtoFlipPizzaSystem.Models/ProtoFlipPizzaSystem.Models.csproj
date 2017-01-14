@@ -54,6 +54,7 @@
     <Compile Include="Administrator\Contracts\IPizza.cs" />
     <Compile Include="Administrator\Customer.cs" />
     <Compile Include="Administrator\Drink.cs" />
+    <Compile Include="Administrator\Ingredient.cs" />
     <Compile Include="Administrator\LargePizza.cs" />
     <Compile Include="Administrator\MiddlePizza.cs" />
     <Compile Include="Administrator\Pasta.cs" />

@@ -1,21 +1,17 @@
 ﻿using System.Collections.Generic;
 
-using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
 using ProtoFlipPizzaSystem.Models.Contracts;
+using ProtoFlipPizzaSystem.Models.Client.Structures;
 
 namespace ProtoFlipPizzaSystem.Models.Client.Contracts
 {
     public interface IOrder : ICanBeDeleted
     {
-        IProduct Product { get; }
-
-        int Quantity { get; }
-
-        decimal TotalProductPrice { get; }
+        List<OrderItem> Products { get; }
 
         bool IsDeleted { get; }
 
-        decimal CalculateTotalOrderPrice(List<IOrder> order);
+        decimal CalculateTotalOrderPrice();
 
     }
 }

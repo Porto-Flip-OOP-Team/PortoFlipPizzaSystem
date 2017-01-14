@@ -5,65 +5,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
-using ProtoFlipPizzaSystem.Models.Validation;
+using ProtoFlipPizzaSystem.Models.Client.Structures;
 
 namespace ProtoFlipPizzaSystem.Models.Client.Order
 {
    public class Order : IOrder
     {
 
-        private IProduct product;
-        private int quantity;
-
-        public Order(IProduct product, int quantity)
+        public Order(List<OrderItem> products, int quantity)
         {
-            this.Product = product;
-            this.Quantity = quantity;
+            this.Products = products;
         }
 
         public bool IsDeleted { get; private set; } = false;
 
-        public IProduct Product
+        public List<OrderItem> Products { get; private set; }
+
+        public void AddProduct(decimal quantity, IProduct product)
         {
-            get
-            {
-                return this.product;
-            }
-            set
-            {
-                //Some validation whether the product exists in the menu
-                this.product = value;
-            }
+            this.Products.Add(new OrderItem(product, quantity));
         }
 
-        public int Quantity
+        public void DeleteProduct(IProduct product)
         {
-            get
-            {
-                return this.quantity;
-            }
-
-            private set
-            {
-                Validator.ValidateOrderQuantity(value, "Quantity must be 1 or more");
-                this.quantity = value;
-            }
+            int index = this.Products.FindIndex(item => item.OrderProduct.Name.Equals(product.Name));
+            this.Products.RemoveAt(index);
         }
 
-        public decimal TotalProductPrice
-        {
-            get
-            {
-                return Product.CalculatePrice() * quantity;
-            }
-        }
 
-          public decimal CalculateTotalOrderPrice(List<IOrder> order)
+        public decimal CalculateTotalOrderPrice()
         {
             decimal sum = 0;
-            foreach (var element in order)
+            foreach (var product in Products)
             {
-                sum += element.TotalProductPrice;
+                sum += product.Quantity * product.OrderProduct.CalculatePrice();
             }
             return sum;
         }
