@@ -18,6 +18,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Structures
         }
 
         public IIngredient Igredient { get; private set; }
+
         public decimal Quantity { get; private set; }
 
     }

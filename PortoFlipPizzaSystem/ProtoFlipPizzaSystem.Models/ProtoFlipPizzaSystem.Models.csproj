@@ -50,6 +50,10 @@
     <Compile Include="Administrator\Customer.cs" />
     <Compile Include="Administrator\Structures\ProductItem.cs" />
     <Compile Include="Client\Structures\OrderItem.cs" />
+    <Compile Include="Contracts\ICalculatable.cs" />
+    <Compile Include="Contracts\INamable.cs" />
+    <Compile Include="Contracts\IPriceble.cs" />
+    <Compile Include="Contracts\IQuantable.cs" />
     <Compile Include="Enums\WorkPositionType.cs" />
     <Compile Include="Administrator\Staff.cs" />
     <Compile Include="Administrator\Contracts\ICustomer.cs" />
@@ -69,6 +73,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Models.cd" />
+    <None Include="Settings.StyleCop" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Client\Abstract\" />
