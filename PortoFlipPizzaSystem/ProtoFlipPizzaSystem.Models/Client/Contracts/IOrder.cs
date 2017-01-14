@@ -8,11 +8,14 @@ namespace ProtoFlipPizzaSystem.Models.Client.Contracts
     {
         IProduct Product { get; }
 
-        int Quantity { get; set; }
+        int Quantity { get; }
 
         decimal TotalProductPrice { get; }
 
+        bool IsDeleted { get; }
+
         decimal CalculateTotalOrderPrice(List<IOrder> order);
+        void Delete();
 
     }
 }

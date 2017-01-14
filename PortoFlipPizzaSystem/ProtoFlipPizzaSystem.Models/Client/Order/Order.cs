@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+using ProtoFlipPizzaSystem.Models.Validation;
 
 namespace ProtoFlipPizzaSystem.Models.Client.Order
 {
@@ -19,6 +20,8 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
             this.Product = product;
             this.Quantity = quantity;
         }
+
+        public bool IsDeleted { get; private set; } = false;
 
         public IProduct Product
         {
@@ -40,12 +43,9 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
                 return this.quantity;
             }
 
-            set
+            private set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentOutOfRangeException("The quantity of product must be a positive number");
-                }
+                Validator.ValidateOrderQuantity(value, "Quantity must be 1 or more");
                 this.quantity = value;
             }
         }
@@ -66,6 +66,11 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
                 sum += element.TotalProductPrice;
             }
             return sum;
+        }
+
+        public void Delete()
+        {
+            this.IsDeleted = true;
         }
     }
 }

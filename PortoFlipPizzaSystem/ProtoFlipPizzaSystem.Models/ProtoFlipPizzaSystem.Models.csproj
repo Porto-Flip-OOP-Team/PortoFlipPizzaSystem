@@ -46,9 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator\Abstract\Food.cs" />
     <Compile Include="Administrator\Abstract\Person.cs" />
+    <Compile Include="Administrator\Abstract\Pizza.cs" />
+    <Compile Include="Administrator\Abstract\Product.cs" />
+    <Compile Include="Administrator\Contracts\IPizza.cs" />
     <Compile Include="Administrator\Customer.cs" />
+    <Compile Include="Administrator\LargePizza.cs" />
+    <Compile Include="Administrator\MiddlePizza.cs" />
+    <Compile Include="Administrator\SmallPizza.cs" />
     <Compile Include="Administrator\Structures\ProductItem.cs" />
+    <Compile Include="Client\Order\OfflineOrder.cs" />
+    <Compile Include="Client\Order\OnlineOrder.cs" />
     <Compile Include="Client\Structures\OrderItem.cs" />
     <Compile Include="Contracts\ICalculatable.cs" />
     <Compile Include="Contracts\INamable.cs" />
@@ -68,6 +77,8 @@
     <Compile Include="Client\Order\Order.cs" />
     <Compile Include="Enums\MeasureUnitType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validation\InvalidMenuItemException.cs" />
+    <Compile Include="Validation\InvalidOrderQuantityException.cs" />
     <Compile Include="Validation\Validator.cs" />
   </ItemGroup>
   <ItemGroup>
