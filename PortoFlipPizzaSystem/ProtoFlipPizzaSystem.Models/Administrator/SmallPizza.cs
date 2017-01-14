@@ -6,25 +6,25 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+using ProtoFlipPizzaSystem.Models.Administrator.Abstract;
 
 
-namespace ProtoFlipPizzaSystem.Products
+namespace ProtoFlipPizzaSystem.Models.Administrator
 {
-
-    public class LargePizza : Pizza, IPizza
+    public class SmallPizza : Pizza, IPizza
     {
-        private const decimal premium = 0.05M;
-        private const decimal quantityOfProduct = 2M;
-        public const int numberOfSlices = 12;
+        private const decimal premium = 0.15M;
+        private const decimal quantityOfProduct = 1M;
+        public const int numberOfSlices = 6;
 
-        public LargePizza(string name, List<IIngredient> ingredients) : base(name, ingredients)
+        public SmallPizza(string name, List<IIngredient> ingredients) : base(name, ingredients)
         {
 
         }
 
         public override string Visualise()
         {
-            string visualization = "Large " + Name
+            string visualization = "Small " + Name
                                             + "\n" + numberOfSlices + "slices"
                                             + "\nPrice: " + CalculatePrice();
 
@@ -37,7 +37,7 @@ namespace ProtoFlipPizzaSystem.Products
 
             foreach (var ingredient in Ingredients)
             {
-                price += (ingredient.Price * quantityOfProduct);
+                price += (ingredient.TotalPrice * quantityOfProduct);
             }
 
             price += (price * premium);

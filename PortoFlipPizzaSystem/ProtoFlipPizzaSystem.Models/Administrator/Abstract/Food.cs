@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
 
 
-namespace ProtoFlipPizzaSystem.Products
+namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
 {
     public abstract class Food : Product, IFood
     {
@@ -29,5 +29,7 @@ namespace ProtoFlipPizzaSystem.Products
         {
             this.ingredients.Remove(ingredient);
         }
+
+        public abstract decimal CalculatePrice();
     }
 }

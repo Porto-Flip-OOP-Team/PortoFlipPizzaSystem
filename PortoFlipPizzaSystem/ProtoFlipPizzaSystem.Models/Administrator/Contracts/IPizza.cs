@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace ProtoFlipPizzaSystem.Products
+namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 {
-    public interface IPizza : IFood
+    interface IPizza : IFood
     {
         string Name { get; }
         List<IIngredient> Ingredients { get; }

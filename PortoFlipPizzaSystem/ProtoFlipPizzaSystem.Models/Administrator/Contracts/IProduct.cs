@@ -2,6 +2,6 @@
 {
     public interface IProduct
     {
-        decimal calculatePrice();
+        decimal CalculatePrice();
     }
 }
