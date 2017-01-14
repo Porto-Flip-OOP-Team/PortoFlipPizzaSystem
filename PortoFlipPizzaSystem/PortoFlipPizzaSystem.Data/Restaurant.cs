@@ -4,19 +4,25 @@ using System.Collections.Generic;
 using PortoFlipPizzaSystem.Data.Contracts;
 using ProtoFlipPizzaSystem.Models.Client.Contracts;
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+using ProtoFlipPizzaSystem.Models.Validation;
 
 namespace PortoFlipPizzaSystem.Data
 {
     public class Restaurant : IRestaurant
     {
+        private const string CannotAddNullObject = "Cannot add a null object as a {0}.";
+        private const string IdCannotBeNegativeNumber = "Id cannot be a negative number.";
+        private const string TheGivenIdIsNotPresentInDictionary = "The given id is not present in the dictionary.";
+
+
         private static Restaurant restaurantInstance = null;
         private static readonly Lazy<Restaurant> Lazy = new Lazy<Restaurant>(() => new Restaurant());
 
-        private Dictionary<int, ICustomer> customers;
-        private Dictionary<int, IIngredient> ingredients;
-        private Dictionary<int, IOrder> orders;
-        private Dictionary<int, IProduct> products;
-        private Dictionary<int, IStaff> staff;
+        private IDictionary<int, ICustomer> customers;
+        private IDictionary<int, IIngredient> ingredients;
+        private IDictionary<int, IOrder> orders;
+        private IDictionary<int, IProduct> products;
+        private IDictionary<int, IStaff> staff;
 
         private Restaurant()
         {
@@ -35,124 +41,222 @@ namespace PortoFlipPizzaSystem.Data
             }
         }
 
-        public void AddCustomer(int Customer, ICustomer customer)
+        public void AddCustomer(int customerId, ICustomer customer)
         {
-            throw new NotImplementedException();
+            Validator.ValidateIntRange(customerId, 0, int.MaxValue, IdCannotBeNegativeNumber);
+            Validator.ValidateNull(customer, string.Format(CannotAddNullObject, nameof(customer)));
+
+            this.customers.Add(customerId, customer);
         }
 
         public void AddIngredient(int ingredientId, IIngredient ingredient)
         {
-            throw new NotImplementedException();
+            Validator.ValidateIntRange(ingredientId, 0, int.MaxValue, IdCannotBeNegativeNumber);
+            Validator.ValidateNull(ingredient, string.Format(CannotAddNullObject, nameof(ingredient)));
+
+            this.ingredients.Add(ingredientId, ingredient);
         }
 
         public void AddOrder(int orderId, IOrder order)
         {
-            throw new NotImplementedException();
+            Validator.ValidateIntRange(orderId, 0, int.MaxValue, IdCannotBeNegativeNumber);
+            Validator.ValidateNull(order, string.Format(CannotAddNullObject, nameof(order)));
+
+            this.orders.Add(orderId, order);
         }
 
-        public void AddProduct(int id, IProduct product)
+        // May be change the data structure => to have key for a product group and dictionary of products
+        public void AddProduct(int productId, IProduct product)
         {
-            throw new NotImplementedException();
+            Validator.ValidateIntRange(productId, 0, int.MaxValue, IdCannotBeNegativeNumber);
+            Validator.ValidateNull(product, string.Format(CannotAddNullObject, nameof(product)));
+
+            this.products.Add(productId, product);
         }
 
         public void AddStaff(int staffId, IStaff staff)
         {
-            throw new NotImplementedException();
+            Validator.ValidateIntRange(staffId, 0, int.MaxValue, IdCannotBeNegativeNumber);
+            Validator.ValidateNull(staffId, string.Format(CannotAddNullObject, nameof(staff)));
         }
 
         public ICollection<ICustomer> GetAllCustomers()
         {
-            throw new NotImplementedException();
+            ICollection<ICustomer> customersList = new List<ICustomer>();
+            foreach (var customer in this.customers)
+            {
+                customersList.Add(customer.Value);
+            }
+
+            return customersList;
         }
 
         public ICollection<IIngredient> GetAllIngredients()
         {
-            throw new NotImplementedException();
+            ICollection<IIngredient> ingredientsList = new List<IIngredient>();
+            foreach (var ingredient in this.ingredients)
+            {
+                ingredientsList.Add(ingredient.Value);
+            }
+
+            return ingredientsList;
         }
 
         public ICollection<IOrder> GetAllOrders()
         {
-            throw new NotImplementedException();
+            ICollection<IOrder> orderList = new List<IOrder>();
+            foreach (var order in this.orders)
+            {
+                orderList.Add(order.Value);
+            }
+
+            return orderList;
         }
 
         public ICollection<IProduct> GetAllProducts()
         {
-            throw new NotImplementedException();
+            ICollection<IProduct> productsList = new List<IProduct>();
+            foreach (var product in this.products)
+            {
+                productsList.Add(product.Value);
+            }
+
+            return productsList;
         }
 
         public ICollection<IStaff> GetAllStaff()
         {
-            throw new NotImplementedException();
+            ICollection<IStaff> staffList = new List<IStaff>();
+            foreach (var person in this.staff)
+            {
+                staffList.Add(person.Value);
+            }
+
+            return staffList;
         }
 
         public ICustomer GetCustomer(int customerId)
         {
-            throw new NotImplementedException();
+            if (!this.customers.ContainsKey(customerId))
+            {
+                throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
+            }
+
+            return this.customers[customerId];
         }
 
         public IIngredient GetIngredient(int ingredientId)
         {
-            throw new NotImplementedException();
+            if (!this.customers.ContainsKey(ingredientId))
+            {
+                throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
+            }
+
+            return this.ingredients[ingredientId];
         }
 
         public IOrder GetOrder(int orderId)
         {
-            throw new NotImplementedException();
+            if (!this.customers.ContainsKey(orderId))
+            {
+                throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
+            }
+
+            return this.orders[orderId];
         }
 
         public IProduct GetProduct(int productId)
         {
-            throw new NotImplementedException();
+            if (!this.customers.ContainsKey(productId))
+            {
+                throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
+            }
+
+            return this.products[productId];
         }
 
-        public IStaff GetStuff(int stuffID)
+        public IStaff GetStuff(int staffId)
         {
-            throw new NotImplementedException();
+            if (!this.customers.ContainsKey(staffId))
+            {
+                throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
+            }
+
+            return this.staff[staffId];
         }
 
         public void RemoveCustomer(int customerId)
         {
-            throw new NotImplementedException();
+            if (!this.customers.ContainsKey(customerId))
+            {
+                throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
+            }
+
+            this.customers[customerId].Delete();
         }
 
         public void RemoveIngredient(int ingredientId)
         {
-            throw new NotImplementedException();
+            if (!this.customers.ContainsKey(ingredientId))
+            {
+                throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
+            }
+
+            this.ingredients[ingredientId].Delete();
         }
 
         public void RemoveOrder(int orderId)
         {
-            throw new NotImplementedException();
+            if (!this.customers.ContainsKey(orderId))
+            {
+                throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
+            }
+
+            this.orders[orderId].Delete();
         }
 
-        public void RemoveProduct(int Id)
+        public void RemoveProduct(int productId)
         {
-            throw new NotImplementedException();
+            if (!this.customers.ContainsKey(productId))
+            {
+                throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
+            }
+
+            this.products[productId].Delete();
         }
 
         public void RemoveStaff(int staffId)
         {
-            throw new NotImplementedException();
+            if (!this.customers.ContainsKey(staffId))
+            {
+                throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
+            }
+
+            this.staff[staffId].Delete();
         }
 
         public void UpdateCustomer(int customerId)
         {
+            // TODO  => how
             throw new NotImplementedException();
         }
 
-        public void UpdateOrder(int orderId, IProduct product)
+        public void UpdateOrder(int orderId, IProduct product, int quantity)
         {
-            throw new NotImplementedException();
+            // To ask Krasi
+            // this.orders[orderId].pr
         }
 
         public void UpdateProduct(int productId)
         {
+            // Is it nessesary?
             throw new NotImplementedException();
         }
 
-        public void UpdateQuantity(int ingredientID, decimal quantity)
+        public void UpdateIngredient(int ingredientID, decimal quantity)
         {
-            throw new NotImplementedException();
+            // To think about
+           // this.ingredients[ingredientID].Quantity += quantity;
         }
 
         public void UpdateStuff(int stuffId)
