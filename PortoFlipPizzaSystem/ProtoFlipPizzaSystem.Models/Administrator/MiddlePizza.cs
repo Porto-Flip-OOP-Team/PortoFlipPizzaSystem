@@ -22,6 +22,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
 
         }
 
+        // TODO refactor string format or C#6
         public override string Visualise()
         {
             string visualization = "Small " + Name

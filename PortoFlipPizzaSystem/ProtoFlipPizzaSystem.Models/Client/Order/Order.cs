@@ -9,7 +9,7 @@ using ProtoFlipPizzaSystem.Models.Validation;
 
 namespace ProtoFlipPizzaSystem.Models.Client.Order
 {
-    class Order : IOrder
+   public class Order : IOrder
     {
 
         private IProduct product;
@@ -54,7 +54,7 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
         {
             get
             {
-                return Product.calculatePrice() * quantity;
+                return Product.CalculatePrice() * quantity;
             }
         }
 

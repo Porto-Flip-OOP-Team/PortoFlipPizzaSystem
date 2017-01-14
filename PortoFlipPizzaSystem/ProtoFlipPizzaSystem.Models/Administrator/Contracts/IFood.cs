@@ -8,5 +8,6 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 {
     interface IFood : IProduct
     {
+        // TODO => what IFood is doing
     }
 }

@@ -60,6 +60,7 @@
     <Compile Include="Client\Order\OnlineOrder.cs" />
     <Compile Include="Client\Structures\OrderItem.cs" />
     <Compile Include="Contracts\ICalculatable.cs" />
+    <Compile Include="Contracts\ICanBeDeleted.cs" />
     <Compile Include="Contracts\INamable.cs" />
     <Compile Include="Contracts\IPriceble.cs" />
     <Compile Include="Contracts\IQuantable.cs" />

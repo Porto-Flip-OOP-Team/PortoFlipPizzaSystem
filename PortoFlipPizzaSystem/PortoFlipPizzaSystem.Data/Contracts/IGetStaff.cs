@@ -4,6 +4,6 @@ namespace PortoFlipPizzaSystem.Data.Contracts
 {
     public interface IGetStaff
     {
-        IStaff GetStuff(int stuffID);
+        IStaff GetStuff(int staffId);
     }
 }

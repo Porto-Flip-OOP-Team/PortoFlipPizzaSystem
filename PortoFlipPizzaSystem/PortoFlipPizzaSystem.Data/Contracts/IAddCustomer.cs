@@ -4,6 +4,6 @@ namespace PortoFlipPizzaSystem.Data.Contracts
 {
     public interface IAddCustomer
     {
-        void AddCustomer(int Customer, ICustomer customer);
+        void AddCustomer(int customerID, ICustomer customer);
     }
 }

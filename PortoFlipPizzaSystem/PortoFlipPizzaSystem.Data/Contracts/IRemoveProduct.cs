@@ -2,6 +2,6 @@
 {
     public interface IRemoveProduct
     {
-        void RemoveProduct(int Id);
+        void RemoveProduct(int productId);
     }
 }

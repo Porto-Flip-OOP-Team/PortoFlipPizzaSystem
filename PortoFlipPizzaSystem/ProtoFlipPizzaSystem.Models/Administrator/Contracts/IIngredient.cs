@@ -14,6 +14,6 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 
         decimal Quantity { get; }
 
-        bool IsDeleted { get; }
+        void Delete();
     }
 }

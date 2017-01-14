@@ -1,6 +1,8 @@
-﻿namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
+﻿using ProtoFlipPizzaSystem.Models.Contracts;
+
+namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 {
-    public interface IProduct
+    public interface IProduct : ICanBeDeleted
     {
         decimal CalculatePrice();
     }
