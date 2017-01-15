@@ -1,17 +1,13 @@
-﻿using ProtoFlipPizzaSystem.Models.Client.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+using ProtoFlipPizzaSystem.Models.Client.Contracts;
 using ProtoFlipPizzaSystem.Models.Client.Structures;
 
 namespace ProtoFlipPizzaSystem.Models.Client.Order
 {
-   public class Order : IOrder
+    public class Order : IOrder
     {
-
         public Order(List<OrderItem> products, int quantity)
         {
             this.Products = products;
@@ -31,7 +27,6 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
             int index = this.Products.FindIndex(item => item.OrderProduct.Name.Equals(product.Name));
             this.Products.RemoveAt(index);
         }
-
 
         public decimal CalculateTotalOrderPrice()
         {
