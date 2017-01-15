@@ -1,8 +1,9 @@
-﻿using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
-using ProtoFlipPizzaSystem.Models.Client.Contracts;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+
+using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+using ProtoFlipPizzaSystem.Models.Validation.Exceptions;
 
 namespace ProtoFlipPizzaSystem.Models.Validation
 {
