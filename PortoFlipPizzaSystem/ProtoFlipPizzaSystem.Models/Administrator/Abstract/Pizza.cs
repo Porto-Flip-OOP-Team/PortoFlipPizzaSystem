@@ -38,7 +38,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
 
             foreach (var productItem in this.Ingredients)
             {
-                price += (productItem.Igredient.TotalPrice * productItem.Quantity);
+                price += (productItem.Igredient.CalculateIngredientPrice() * productItem.Quantity);
             }
 
             price += (price * (PizzaPremium + Coeff));
