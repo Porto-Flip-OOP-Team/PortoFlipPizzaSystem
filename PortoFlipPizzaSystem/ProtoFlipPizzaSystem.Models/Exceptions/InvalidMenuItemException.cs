@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ProtoFlipPizzaSystem.Models.Validation.Exceptions
+namespace ProtoFlipPizzaSystem.Models.Exceptions
 {
     public class InvalidMenuItemException : ArgumentException
     {

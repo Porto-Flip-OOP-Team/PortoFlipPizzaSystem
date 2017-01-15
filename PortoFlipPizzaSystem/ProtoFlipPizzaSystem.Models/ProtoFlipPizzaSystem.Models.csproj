@@ -82,8 +82,8 @@
     <Compile Include="Client\Order\Order.cs" />
     <Compile Include="Enums\MeasureUnitType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validation\Exceptions\InvalidMenuItemException.cs" />
-    <Compile Include="Validation\Exceptions\InvalidOrderQuantityException.cs" />
+    <Compile Include="Exceptions\InvalidMenuItemException.cs" />
+    <Compile Include="Exceptions\InvalidOrderQuantityException.cs" />
     <Compile Include="Validation\Validator.cs" />
   </ItemGroup>
   <ItemGroup>

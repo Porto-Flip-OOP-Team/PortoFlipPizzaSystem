@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
-using ProtoFlipPizzaSystem.Models.Validation.Exceptions;
+using ProtoFlipPizzaSystem.Models.Exceptions;
 
 namespace ProtoFlipPizzaSystem.Models.Validation
 {
