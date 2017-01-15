@@ -45,6 +45,7 @@ namespace PortoFlipPizzaSystem.Core
                     string commandResult = this.CommandHandler.ExecuteCommand(command, parameters);
                     Console.WriteLine(commandResult);
                 }
+
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);

@@ -46,10 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\App.cs" />
-    <Compile Include="Core\CommandHandler.cs" />
-    <Compile Include="Core\Contracts\IApp.cs" />
-    <Compile Include="Core\Contracts\ICommandHandler.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="CommandHandler.cs" />
+    <Compile Include="Contracts\IApp.cs" />
+    <Compile Include="Contracts\ICommandHandler.cs" />
+    <Compile Include="Contracts\IController.cs" />
+    <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +63,7 @@
       <Name>PortoFlipPizzaSystem.Data</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

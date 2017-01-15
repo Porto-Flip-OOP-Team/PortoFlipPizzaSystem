@@ -5,8 +5,17 @@ namespace PortoFlipPizzaSystem.Core
 {
     public class CommandHandler : ICommandHandler
     {
-        public CommandHandler()
+        private IController controller;
+
+        public CommandHandler(IController controller)
         {
+            this.Controller = controller;
+        }
+
+        public IController Controller
+        {
+            get { return this.controller; }
+            private set { this.controller = value; }
         }
 
         public string ExecuteCommand(string name, string[] parameters)

@@ -3,7 +3,5 @@
     public interface IApp
     {
         void RunProgram();
-
-
     }
 }
