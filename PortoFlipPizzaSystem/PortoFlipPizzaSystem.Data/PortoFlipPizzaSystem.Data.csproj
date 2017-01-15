@@ -61,11 +61,6 @@
     <Compile Include="Contracts\IRemoveProduct.cs" />
     <Compile Include="Contracts\IRemoveStaff.cs" />
     <Compile Include="Contracts\IRestaurant.cs" />
-    <Compile Include="Contracts\IUpdateCustomer.cs" />
-    <Compile Include="Contracts\IUpdateIngredient.cs" />
-    <Compile Include="Contracts\IUpdateOrder.cs" />
-    <Compile Include="Contracts\IUpdateProduct.cs" />
-    <Compile Include="Contracts\IUpdateStaff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Restaurant.cs" />
   </ItemGroup>

@@ -1,30 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ProtoFlipPizzaSystem.Models.Administrator.Abstract;
+﻿using ProtoFlipPizzaSystem.Models.Administrator.Abstract;
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+using ProtoFlipPizzaSystem.Models.Contracts;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator
 {
-    public class Customer : Person, ICustomer
+    public class Customer : Person, IPerson, ICustomer, IDeletable, IIdentifiable
     {
         private const decimal MAX_DISCOUNT = 20;
         private decimal discount;
+
         public Customer(string firstName, string lastName, string address) : base(firstName, lastName, address)
         {
         }
-
-        public Customer(int idPerson, string firstName, string lastName, string address) : base(idPerson, firstName, lastName, address)
-        {
-        }
-
         public Customer(string firstName, string lastName, string address, decimal discount) : base(firstName, lastName, address)
-        {
-            this.Discount = discount;
-        }
-        public Customer(int idPerson, string firstName, string lastName, string address, decimal discount) : base(idPerson, firstName, lastName, address)
         {
             this.Discount = discount;
         }
@@ -35,6 +23,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
             {
                 return this.discount;
             }
+
             private set
             {
                 if (value > 20)
@@ -47,7 +36,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
                 }
             }
         }
-        public int NumberOfOrders { get; private set; }
 
+        public int NumberOfOrders { get;  set; }
     }
 }

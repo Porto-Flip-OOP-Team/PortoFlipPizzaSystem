@@ -8,7 +8,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 
         MeasureUnitType UnitType { get; }
 
-        decimal CalculateIngredientPrice();
+        decimal CalculatePrice();
 
         decimal UnitPrice { get; }
 

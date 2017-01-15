@@ -1,43 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+﻿using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+using ProtoFlipPizzaSystem.Models.Contracts;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
 {
-    public abstract class Person : IPerson
+    public abstract class Person : IPerson, IDeletable, IIdentifiable
     {
         protected static int idCounter = 1;
+        private readonly int id;
+        private bool isDeleted;
 
         public Person(string firstName, string lastName, string address)
         {
-            this.IdPerson = this.GenerateId();
+            this.id = this.GenerateId();
             this.FirstName = firstName;
             this.LastName = lastName;
             this.Address = address;
+            this.isDeleted = false;
         }
 
-        public Person(int idPerson, string firstName, string lastName, string address)
-        {
-            this.IdPerson = idPerson;
-            this.IdPerson = this.GenerateId();
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.Address = address;
-        }
-
-
-        public int IdPerson { get; private set; }
-
-        public bool IsDeleted { get; private set; } = false;
+        public int Id { get; }
 
         public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public string Address { get; private set; }
 
+        public string LastName { get; private set; }
+
+        public string Address { get; set; }
 
         protected virtual int GenerateId()
         {
@@ -46,7 +33,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
 
         public void Delete()
         {
-            this.IsDeleted = true;
+            this.isDeleted = true;
         }
     }
 }

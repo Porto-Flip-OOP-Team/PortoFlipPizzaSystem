@@ -5,7 +5,7 @@ using ProtoFlipPizzaSystem.Models.Client.Structures;
 
 namespace ProtoFlipPizzaSystem.Models.Client.Contracts
 {
-    public interface IOrder : ICanBeDeleted
+    public interface IOrder : IDeletable
     {
         List<OrderItem> Products { get; }
 

@@ -49,7 +49,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
             this.IsDeleted = true;
         }
 
-        public decimal CalculateIngredientPrice()
+        public decimal CalculatePrice()
         {
             return this.Quantity * this.UnitPrice;
         }

@@ -1,6 +1,6 @@
 ﻿namespace ProtoFlipPizzaSystem.Models.Contracts
 {
-    public interface ICanBeDeleted
+    public interface IDeletable
     {
         void Delete();
     }

@@ -1,8 +1,7 @@
 ﻿namespace ProtoFlipPizzaSystem.Models.Contracts
 {
-    public interface  IPriceble
+    public interface IIdentifiable
     {
-        decimal price { get; }
-
+        int Id { get; }
     }
 }

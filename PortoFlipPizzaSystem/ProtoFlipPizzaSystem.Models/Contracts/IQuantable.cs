@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProtoFlipPizzaSystem.Models.Contracts
+﻿namespace ProtoFlipPizzaSystem.Models.Contracts
 {
-    public interface IQuantable
+    public interface IQuantable<T> where T : struct
     {
+        T quantity { get; set; }
     }
 }

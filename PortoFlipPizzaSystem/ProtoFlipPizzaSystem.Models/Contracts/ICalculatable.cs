@@ -1,7 +1,7 @@
 ﻿namespace ProtoFlipPizzaSystem.Models.Contracts
 {
-    public interface ICalculatable<T>
+    public interface ICalculatable
     {
-        T CalculateTotal(T quantity, decimal price);
+        decimal CalculatePrice();
     }
 }
