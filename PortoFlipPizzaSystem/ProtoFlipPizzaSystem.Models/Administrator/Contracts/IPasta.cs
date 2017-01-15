@@ -8,7 +8,6 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 {
     public interface IPasta : IFood
     {
-
         decimal PastaPremium { get; }
 
         void SetPastaPremium(decimal pastaPremium);

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortoFlipPizzaSystem", "PortoFlipPizzaSystem\PortoFlipPizzaSystem.csproj", "{D1023B78-4DD8-4C26-AB7D-ED82E65A6D07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortoFlipPizzaSystem.Core", "PortoFlipPizzaSystem.Core\PortoFlipPizzaSystem.Core.csproj", "{D1023B78-4DD8-4C26-AB7D-ED82E65A6D07}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortoFlipPizzaSystem.Data", "PortoFlipPizzaSystem.Data\PortoFlipPizzaSystem.Data.csproj", "{5F317836-447C-4E57-B15B-0D7B6CEC609E}"
 EndProject

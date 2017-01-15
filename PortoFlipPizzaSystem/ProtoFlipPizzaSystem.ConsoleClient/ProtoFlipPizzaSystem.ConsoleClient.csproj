@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PortoFlipPizzaSystem\PortoFlipPizzaSystem.csproj">
+    <ProjectReference Include="..\PortoFlipPizzaSystem.Core\PortoFlipPizzaSystem.Core.csproj">
       <Project>{D1023B78-4DD8-4C26-AB7D-ED82E65A6D07}</Project>
-      <Name>PortoFlipPizzaSystem</Name>
+      <Name>PortoFlipPizzaSystem.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\ProtoFlipPizzaSystem.Models\ProtoFlipPizzaSystem.Models.csproj">
       <Project>{73C74A20-E126-4FC6-BFA2-8609F3CC6C65}</Project>
