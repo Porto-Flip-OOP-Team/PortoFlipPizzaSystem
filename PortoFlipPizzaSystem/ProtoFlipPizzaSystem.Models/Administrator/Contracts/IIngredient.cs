@@ -12,7 +12,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 
         decimal UnitPrice { get; }
 
-        decimal Quantity { get; }
+        decimal Quantity { get; set; }
         
         bool IsDeleted { get; }
 

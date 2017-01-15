@@ -39,7 +39,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
 
         public bool IsDeleted { get; private set; } = false;
 
-        public decimal Quantity { get; private set; }
+        public decimal Quantity { get;  set; }
 
         public decimal UnitPrice { get; private set; }
 

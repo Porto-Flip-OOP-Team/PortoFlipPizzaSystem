@@ -24,7 +24,9 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
         }
 
         public string Name { get; private set; }
+
         public bool IsDeleted { get; private set; } = false;
+
         public int IdProduct { get; private set; }
 
         public abstract decimal CalculatePrice();

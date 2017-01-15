@@ -234,44 +234,5 @@ namespace PortoFlipPizzaSystem.Data
 
             this.staff[staffId].Delete();
         }
-
-        public void UpdateCustomer(int customerId)
-        {
-            // TODO  => how
-            throw new NotImplementedException();
-        }
-
-        public void UpdateOrder(int orderId, IProduct product, int quantity)
-        {
-            // To ask Krasi
-            // this.orders[orderId].pr
-        }
-
-        public void UpdateProduct(int productId)
-        {
-            // Is it nessesary?
-            throw new NotImplementedException();
-        }
-
-        public void UpdateIngredient(int ingredientID, decimal quantity)
-        {
-            // To think about
-            // this.ingredients[ingredientID].Quantity += quantity;
-        }
-
-        public void UpdateStuff(int stuffId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateOrder(int orderId, IProduct product)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateQuantity(int ingredientID, decimal quantity)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
