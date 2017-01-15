@@ -18,7 +18,13 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
             this.isDeleted = false;
         }
 
-        public int Id { get; }
+        public int Id
+        {
+            get
+            {
+                return this.id;
+            }
+        }
 
         public string FirstName { get; private set; }
 
