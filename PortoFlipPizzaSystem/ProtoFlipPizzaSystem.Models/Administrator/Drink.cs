@@ -1,28 +1,69 @@
-﻿using System;
+﻿using System.Text;
+
+using ProtoFlipPizzaSystem.Models.Administrator.Abstract;
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
 using ProtoFlipPizzaSystem.Models.Enums;
-using ProtoFlipPizzaSystem.Models.Administrator.Abstract;
-using System.Text;
+using ProtoFlipPizzaSystem.Models.Contracts;
+using ProtoFlipPizzaSystem.Models.Validation;
+using ProtoFlipPizzaSystem.Models.Utils;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator
 {
-    public class Drink : Product, IDrink
+    public class Drink : Product, IProduct, IDrink, ICalculatable, IDeletable, IIdentifiable, INamable
     {
 
-        public Drink(string name, decimal price, MeasureUnitType quantity) : base(name)
-        {
-            this.Price = price;
-            this.Quantity = quantity;
-        }
-        public Drink(int id, string name, decimal price, MeasureUnitType quantity) : base(id, name)
-        {
-            this.Price = price;
-            this.Quantity = quantity;
-        }
+        private const int MaxUnitQuantity = 1500;
+
+        private decimal price;
+        private int totalQuantity;
+        private int unitQuantity;
+        private readonly MeasureUnitType measureUnitType;
 
 
-        private decimal Price { get; set; }
-        public MeasureUnitType Quantity { get; private set; }
+        public Drink(string name, decimal price, int unitQuantity, int totalQuantity, MeasureUnitType measureUnitType)
+            : base(name)
+        {
+            this.Price = price;
+            this.TotalQuantity = totalQuantity;
+            this.measureUnitType = measureUnitType;
+            this.UnitQuantity = unitQuantity;
+        }
+
+        private decimal Price
+        {
+            get
+            {
+                return this.price;
+            }
+
+            set
+            {
+                Validator.ValidateDecimalRange(value, GlobalConstants.MinPrice, GlobalConstants.MaxPrice, GlobalConstants.InvalidQuantity);
+            }
+        }
+
+        public MeasureUnitType MeasureUnitType
+        {
+            get
+            {
+                return this.measureUnitType;
+            }
+        }
+
+        public int UnitQuantity
+        {
+            get
+            {
+                return this.unitQuantity;
+            }
+
+            private set
+            {
+                string message = string.Format(GlobalConstants.InvalidQuantity, nameof(UnitQuantity), GlobalConstants.MinQuantity, MaxUnitQuantity);
+                Validator.ValidateDecimalRange(value, GlobalConstants.MinQuantity, MaxUnitQuantity, message);
+                this.unitQuantity = value;
+            }
+        }
 
         public override decimal CalculatePrice()
         {
@@ -32,7 +73,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
         public override string ToString()
         {
             StringBuilder visualization = new StringBuilder();
-            visualization.Append($"{this.Name} {this.Quantity} {this.Price}");
+            visualization.Append($"{this.Name} {this.UnitQuantity} {this.MeasureUnitType} {this.Price}");
             return visualization.ToString();
         }
     }

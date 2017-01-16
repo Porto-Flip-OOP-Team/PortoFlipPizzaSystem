@@ -94,5 +94,18 @@ namespace ProtoFlipPizzaSystem.Models.Validation
                 throw new InvalidMenuItemException(message);
             }
         }
+
+        public static void ValidateStringNullEmpty(string value, string message)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                throw new ArgumentNullException(message);
+            }
+        }
+
+        //public static void ValidateStringLength(string value, int minLength, int maxLength, string message)
+        //{
+
+        //}
     }
 }

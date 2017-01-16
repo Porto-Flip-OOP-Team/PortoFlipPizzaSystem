@@ -16,7 +16,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
 
         public const int NUMBER_OF_SLICES = 6;
 
-        public SmallPizza(int id, string name, List<ProductItem> ingredients) : base(id, name, ingredients)
+        public SmallPizza(string name, List<ProductItem> ingredients) : base(name, ingredients)
         {
             this.Coeff = 0.3M;
         }

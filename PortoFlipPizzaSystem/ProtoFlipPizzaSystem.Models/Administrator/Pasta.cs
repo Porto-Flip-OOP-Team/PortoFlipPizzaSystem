@@ -15,9 +15,6 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
         public Pasta(string name, List<ProductItem> ingredients) : base(name, ingredients)
         {
         }
-        public Pasta(int id, string name, List<ProductItem> ingredients) : base(id, name, ingredients)
-        {
-        }
 
         public decimal PastaPremium { get; private set; } = 0.2M;
 

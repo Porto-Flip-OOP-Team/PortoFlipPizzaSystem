@@ -2,12 +2,10 @@
 
 namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 {
-    public interface IProduct : IDeletable
+    public interface IProduct : ICalculatable, IDeletable, IIdentifiable, INamable
     {
-        string Name { get; }
+        void UpdateTotalQuantity(int newQuantity);
 
-        int IdProduct { get; }
-        
-        decimal CalculatePrice();
+        int TotalQuantity { get; set; }
     }
 }

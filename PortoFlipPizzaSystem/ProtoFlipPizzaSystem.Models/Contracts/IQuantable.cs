@@ -2,6 +2,6 @@
 {
     public interface IQuantable<T> where T : struct
     {
-        T quantity { get; set; }
+        T Quantity { get; set; }
     }
 }
