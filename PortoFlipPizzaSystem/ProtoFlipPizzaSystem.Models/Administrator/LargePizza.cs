@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
 using ProtoFlipPizzaSystem.Models.Administrator.Abstract;
@@ -11,12 +7,12 @@ using ProtoFlipPizzaSystem.Models.Administrator.Structures;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator
 {
-
     public class LargePizza : Pizza, IPizza
     {
         public const int NUMBER_OF_SLICES = 12;
 
-        public LargePizza(string name, List<ProductItem> ingredients) : base(name, ingredients)
+        public LargePizza(string name, List<ProductItem> ingredients) 
+            : base(name, ingredients)
         {
 
         }

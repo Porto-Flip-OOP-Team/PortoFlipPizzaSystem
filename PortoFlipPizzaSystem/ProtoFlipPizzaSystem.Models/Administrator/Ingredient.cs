@@ -1,18 +1,14 @@
-﻿using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+
+using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
 using ProtoFlipPizzaSystem.Models.Enums;
 using ProtoFlipPizzaSystem.Models.Validation;
-using ProtoFlipPizzaSystem.Models.Contracts;
+using ProtoFlipPizzaSystem.Models.Common;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator
 {
-    public class Ingredient : IIngredient
+    public class Ingredient : IdentifiableObject, IIngredient
     {
-
         string name;
 
         public Ingredient(string name, decimal unitPrice, decimal quantity, MeasureUnitType unitType)
@@ -43,14 +39,6 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
         public decimal Quantity { get;  set; }
 
         public decimal UnitPrice { get; private set; }
-
-        public int Id
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         public void Delete()
         {

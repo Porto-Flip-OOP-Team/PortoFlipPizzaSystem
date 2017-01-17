@@ -11,7 +11,8 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
 {
     public abstract class Food : Product, IFood
     {
-        public Food(string name, List<ProductItem> ingredients) : base(name)
+        public Food(string name, List<ProductItem> ingredients) 
+            : base(name)
         {
             this.Ingredients = ingredients;
         }
