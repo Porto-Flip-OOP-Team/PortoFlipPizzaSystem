@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+﻿using System.Collections.Generic;
+
 using ProtoFlipPizzaSystem.Models.Client.Structures;
 using ProtoFlipPizzaSystem.Models.Validation;
 
@@ -13,7 +9,8 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
     {
         private int numberOfTable;
 
-        public OfflineOrder(List<OrderItem> products, int quantity) : base(products, quantity)
+        public OfflineOrder(List<OrderItem> products, int quantity) 
+            : base(products, quantity)
         {
             this.NumberOfTable = numberOfTable;
         }

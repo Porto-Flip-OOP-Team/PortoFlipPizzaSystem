@@ -84,33 +84,25 @@ namespace PortoFlipPizzaSystem.Core
 
                     this.RestaurantInstance.AddProduct(drink.Id, drink);
 
-                    var successfulResult = $"Drink with name {drink.Name} and Id {drink.Id} was successfully created!";
+                    var successfulDrinkResult = $"Drink with name {drink.Name} and Id {drink.Id} was successfully created!";
 
-                    return successfulResult;
-
-
-
+                    return successfulDrinkResult;
+                    
                 case "CreateIngredient":
                      var ingredientName = parameters[0];
                      var ingredientPrice = decimal.Parse(parameters[1]);
                      var ingredientUnitQuantity = int.Parse(parameters[2]);
 
                     MeasureUnitType parsedIngredientMeasureUnit;
-                    Enum.TryParse<MeasureUnitType>(parameters[4], out parsedIngredientMeasureUnit);
+                    Enum.TryParse<MeasureUnitType>(parameters[3], out parsedIngredientMeasureUnit);
 
                     var ingredient = new Ingredient(ingredientName, ingredientPrice, ingredientUnitQuantity, parsedIngredientMeasureUnit);
 
                     this.RestaurantInstance.AddIngredient(ingredient.Id, ingredient);
 
-                    var successfulResult = $"Ingredient {drink.Name} and Id {drink.Id} was successfully created!";
+                    var successfulIngredientResult = $"Ingredient {ingredient.Name} with Id {ingredient.Id} was successfully created!";
 
-                    return successfulResult;
-
-
-
-
-                case "Name of the object2":
-                    return "";
+                    return successfulIngredientResult;
 
                 default:
                     throw new InvalidOperationException();

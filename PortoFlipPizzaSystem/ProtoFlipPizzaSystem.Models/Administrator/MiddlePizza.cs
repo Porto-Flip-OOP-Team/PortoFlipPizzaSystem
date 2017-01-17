@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
 using ProtoFlipPizzaSystem.Models.Administrator.Abstract;
@@ -15,7 +11,8 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
     {
         public const int NUMBER_OF_SLICES = 8;
 
-        public MiddlePizza(string name, List<ProductItem> ingredients) : base(name, ingredients)
+        public MiddlePizza(string name, List<ProductItem> ingredients) 
+            : base(name, ingredients)
         {
             this.Coeff = 0.1M;
         }

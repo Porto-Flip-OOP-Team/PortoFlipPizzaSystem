@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+
 using ProtoFlipPizzaSystem.Models.Client.Structures;
 
 namespace ProtoFlipPizzaSystem.Models.Client.Order

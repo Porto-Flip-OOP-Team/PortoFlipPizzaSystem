@@ -10,7 +10,6 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Structures
 {
     public struct ProductItem
     {
-
         public ProductItem(IIngredient ingredient, decimal quantity)
         {
             this.Igredient = ingredient;

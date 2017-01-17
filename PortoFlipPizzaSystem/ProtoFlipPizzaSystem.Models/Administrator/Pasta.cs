@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 
 using ProtoFlipPizzaSystem.Models.Administrator.Abstract;
 using ProtoFlipPizzaSystem.Models.Administrator.Structures;
@@ -12,7 +9,8 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
 {
     class Pasta : Food, IPasta
     {
-        public Pasta(string name, List<ProductItem> ingredients) : base(name, ingredients)
+        public Pasta(string name, List<ProductItem> ingredients) 
+            : base(name, ingredients)
         {
         }
 
