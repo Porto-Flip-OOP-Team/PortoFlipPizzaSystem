@@ -47,11 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="CommandHandler.cs" />
     <Compile Include="Contracts\IApp.cs" />
-    <Compile Include="Contracts\ICommandHandler.cs" />
-    <Compile Include="Contracts\IController.cs" />
-    <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +57,10 @@
     <ProjectReference Include="..\PortoFlipPizzaSystem.Data\PortoFlipPizzaSystem.Data.csproj">
       <Project>{5f317836-447c-4e57-b15b-0d7b6cec609e}</Project>
       <Name>PortoFlipPizzaSystem.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProtoFlipPizzaSystem.Models\ProtoFlipPizzaSystem.Models.csproj">
+      <Project>{73C74A20-E126-4FC6-BFA2-8609F3CC6C65}</Project>
+      <Name>ProtoFlipPizzaSystem.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

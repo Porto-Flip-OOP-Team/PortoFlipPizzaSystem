@@ -1,21 +1,18 @@
 ﻿using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
 using ProtoFlipPizzaSystem.Models.Validation;
 using ProtoFlipPizzaSystem.Models.Utils;
+using ProtoFlipPizzaSystem.Models.Common;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
 {
-    public abstract class Product : IProduct
+    public abstract class Product : IdentifiableObject, IProduct
     {
-        protected static int idCounter = 1;
-
-        private readonly int id;
         private bool isDeleted;
         private int totalQuantity;
         private string name;
 
         public Product(string name)
         {
-            this.id = this.GenerateId();
             this.Name = name;
             this.isDeleted = false;
         }
@@ -32,18 +29,12 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
                 Validator.ValidateStringNullEmpty(value, "The string cannot be null or empty!");
                 string lengthMessage = string.Format(GlobalConstants.InvalidNameLength, GlobalConstants.MinNameLength, GlobalConstants.MaxNameLength);
                 Validator.ValidateIntRange(value.Length, GlobalConstants.MinNameLength, GlobalConstants.MaxNameLength, lengthMessage);
+
+                this.name = value;
             }
         }
 
         // public bool IsDeleted { get; private set; } = false;
-
-        public int Id
-        {
-            get
-            {
-                return this.id;
-            }
-        }
 
         public int TotalQuantity
         {
@@ -65,11 +56,6 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
         public void Delete()
         {
             this.isDeleted = true;
-        }
-
-        protected virtual int GenerateId()
-        {
-            return idCounter++;
         }
 
         public virtual void UpdateTotalQuantity(int newQuantity)

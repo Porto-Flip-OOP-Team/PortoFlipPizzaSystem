@@ -9,9 +9,8 @@ using ProtoFlipPizzaSystem.Models.Utils;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator
 {
-    public class Drink : Product, IProduct, IDrink, ICalculatable, IDeletable, IIdentifiable, INamable
+    public class Drink : Product, IProduct, IDrink, ICalculatable, IDeletable, INamable
     {
-
         private const int MaxUnitQuantity = 1500;
 
         private decimal price;
@@ -39,6 +38,8 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
             set
             {
                 Validator.ValidateDecimalRange(value, GlobalConstants.MinPrice, GlobalConstants.MaxPrice, GlobalConstants.InvalidQuantity);
+
+                this.price = value;
             }
         }
 

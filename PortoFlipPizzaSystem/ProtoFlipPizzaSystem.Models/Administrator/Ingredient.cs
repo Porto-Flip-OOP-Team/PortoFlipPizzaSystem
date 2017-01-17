@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ProtoFlipPizzaSystem.Models.Enums;
 using ProtoFlipPizzaSystem.Models.Validation;
+using ProtoFlipPizzaSystem.Models.Contracts;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator
 {
@@ -14,12 +15,12 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
 
         string name;
 
-        public Ingredient(string name, MeasureUnitType unitType, decimal quantity, decimal unitPrice)
+        public Ingredient(string name, decimal unitPrice, decimal quantity, MeasureUnitType unitType)
         {
             this.Name = name;
+            this.UnitPrice = unitPrice;
             this.UnitType = unitType; 
             this.Quantity = quantity;
-            this.UnitPrice = unitPrice;
         }
 
         public string Name
@@ -43,6 +44,13 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
 
         public decimal UnitPrice { get; private set; }
 
+        public int Id
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
 
         public void Delete()
         {

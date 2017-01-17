@@ -1,4 +1,8 @@
 ﻿using PortoFlipPizzaSystem.Core.Contracts;
+using PortoFlipPizzaSystem.Data;
+using PortoFlipPizzaSystem.Data.Contracts;
+using ProtoFlipPizzaSystem.Models.Administrator;
+using ProtoFlipPizzaSystem.Models.Enums;
 using System;
 using System.Linq;
 
@@ -6,43 +10,39 @@ namespace PortoFlipPizzaSystem.Core
 {
     public class App : IApp
     {
-        private ICommandHandler commandHandler;
-
-        public App(ICommandHandler commandHandler)
-        {
-            this.CommandHandler = commandHandler;
-        }
+        private IRestaurant restaurant;
 
         public App()
-            : this(new CommandHandler())
         {
+            this.RestaurantInstance = Restaurant.RestaurantInstance;
         }
 
-        public ICommandHandler CommandHandler
+        public IRestaurant RestaurantInstance
         {
-            get { return this.commandHandler; }
-            private set { this.commandHandler = value; }
+            get { return this.restaurant; }
+            private set { this.restaurant = value; }
         }
 
         public void RunProgram()
         {
             while (true)
             {
-                string commandLine = ReadCommand();
-
-                if (string.IsNullOrEmpty(commandLine))
-                {
-                    break;
-                }
-
-                string[] tokens = ParseCommand(commandLine);
-
-                string command = tokens[0];
-                string[] parameters = tokens.Skip(1).ToArray();
-
                 try
                 {
-                    string commandResult = this.CommandHandler.ExecuteCommand(command, parameters);
+                    string commandLine = ReadCommand();
+
+                    if (string.IsNullOrEmpty(commandLine))
+                    {
+                        throw new ArgumentOutOfRangeException("Command line cannot be empty!");
+                    }
+
+                    string[] tokens = ParseCommand(commandLine);
+
+                    string command = tokens[0];
+                    string[] parameters = tokens.Skip(1).ToArray();
+
+                    string commandResult = this.ExecuteCommand(command, parameters);
+
                     Console.WriteLine(commandResult);
                 }
 
@@ -53,18 +53,68 @@ namespace PortoFlipPizzaSystem.Core
             }
         }
 
-        private string ReadCommand()
+        public string ReadCommand()
         {
             return Console.ReadLine();
         }
 
-        private string[] ParseCommand(string command)
+        public string[] ParseCommand(string command)
         {
             string[] commandParameters = command.Split(
-                new string[] { " " }, 
+                new string[] { " " },
                 StringSplitOptions.RemoveEmptyEntries);
 
             return commandParameters;
+        }
+
+        public string ExecuteCommand(string command, string[] parameters)
+        {
+            switch (command)
+            {
+                case "CreateDrink":
+                    var drinkName = parameters[0];
+                    var drinkPrice = decimal.Parse(parameters[1]);
+                    var drinkUnitQuantity = int.Parse(parameters[2]);
+                    var drinkTotalQuantity = int.Parse(parameters[3]);
+
+                    MeasureUnitType parsedDrinkMeasureUnit;
+                    Enum.TryParse<MeasureUnitType>(parameters[4], out parsedDrinkMeasureUnit);
+
+                    var drink = new Drink(drinkName, drinkPrice, drinkUnitQuantity, drinkTotalQuantity, parsedDrinkMeasureUnit);
+
+                    this.RestaurantInstance.AddProduct(drink.Id, drink);
+
+                    var successfulResult = $"Drink with name {drink.Name} and Id {drink.Id} was successfully created!";
+
+                    return successfulResult;
+
+
+
+                case "CreateIngredient":
+                     var ingredientName = parameters[0];
+                     var ingredientPrice = decimal.Parse(parameters[1]);
+                     var ingredientUnitQuantity = int.Parse(parameters[2]);
+
+                    MeasureUnitType parsedIngredientMeasureUnit;
+                    Enum.TryParse<MeasureUnitType>(parameters[4], out parsedIngredientMeasureUnit);
+
+                    var ingredient = new Ingredient(ingredientName, ingredientPrice, ingredientUnitQuantity, parsedIngredientMeasureUnit);
+
+                    this.RestaurantInstance.AddIngredient(ingredient.Id, ingredient);
+
+                    var successfulResult = $"Ingredient {drink.Name} and Id {drink.Id} was successfully created!";
+
+                    return successfulResult;
+
+
+
+
+                case "Name of the object2":
+                    return "";
+
+                default:
+                    throw new InvalidOperationException();
+            }
         }
     }
 }
