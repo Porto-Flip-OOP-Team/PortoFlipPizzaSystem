@@ -5,11 +5,11 @@ using ProtoFlipPizzaSystem.Models.Validation;
 
 namespace ProtoFlipPizzaSystem.Models.Client.Order
 {
-    class OfflineOrder : Order
+    public class OfflineOrder : Order
     {
         private int numberOfTable;
 
-        public OfflineOrder(List<OrderItem> products, int quantity) 
+        public OfflineOrder(List<OrderItem> products, int quantity, int numberOfTable)
             : base(products, quantity)
         {
             this.NumberOfTable = numberOfTable;
@@ -21,9 +21,10 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
             {
                 return this.numberOfTable;
             }
+
             private set
             {
-                //Our pizza restaurant has 50 tables
+                // Our pizza restaurant has 50 tables
                 Validator.ValidateIntRange(value, 1, 50, "There's no such number of table.");
                 this.numberOfTable = value;
             }

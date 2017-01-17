@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 
 using PortoFlipPizzaSystem.Data.Contracts;
-using ProtoFlipPizzaSystem.Models.Client.Contracts;
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+using ProtoFlipPizzaSystem.Models.Client.Contracts;
 using ProtoFlipPizzaSystem.Models.Validation;
 
 namespace PortoFlipPizzaSystem.Data
@@ -14,9 +14,8 @@ namespace PortoFlipPizzaSystem.Data
         private const string IdCannotBeNegativeNumber = "Id cannot be a negative number.";
         private const string TheGivenIdIsNotPresentInDictionary = "The given id is not present in the dictionary.";
 
-
-        private static Restaurant restaurantInstance = null;
         private static readonly Lazy<Restaurant> Lazy = new Lazy<Restaurant>(() => new Restaurant());
+        private static Restaurant restaurantInstance = null;
 
         private IDictionary<int, ICustomer> customers;
         private IDictionary<int, IIngredient> ingredients;
@@ -41,6 +40,16 @@ namespace PortoFlipPizzaSystem.Data
             }
         }
 
+        public IDictionary<int, ICustomer> Customers { get; }
+
+        public IDictionary<int, IIngredient> Ingredients { get; }
+
+        public IDictionary<int, IOrder> Orders { get; }
+
+        public IDictionary<int, IProduct> Products { get; }
+
+        public IDictionary<int, IStaff> Staff { get; }
+        
         public void AddCustomer(int customerId, ICustomer customer)
         {
             Validator.ValidateIntRange(customerId, 0, int.MaxValue, IdCannotBeNegativeNumber);
@@ -71,7 +80,7 @@ namespace PortoFlipPizzaSystem.Data
             Validator.ValidateIntRange(productId, 0, int.MaxValue, IdCannotBeNegativeNumber);
             Validator.ValidateNull(product, string.Format(CannotAddNullObject, nameof(product)));
 
-            this.products.Add(productId, product);
+            this.Products.Add(productId, product);
         }
 
         public void AddStaff(int staffId, IStaff staff)
@@ -116,7 +125,7 @@ namespace PortoFlipPizzaSystem.Data
         public ICollection<IProduct> GetAllProducts()
         {
             ICollection<IProduct> productsList = new List<IProduct>();
-            foreach (var product in this.products)
+            foreach (var product in this.Products)
             {
                 productsList.Add(product.Value);
             }
@@ -172,7 +181,7 @@ namespace PortoFlipPizzaSystem.Data
                 throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
             }
 
-            return this.products[productId];
+            return this.Products[productId];
         }
 
         public IStaff GetStuff(int staffId)
@@ -192,7 +201,7 @@ namespace PortoFlipPizzaSystem.Data
                 throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
             }
 
-            this.customers[customerId].Delete();
+            this.customers[customerId].IsDeleted = true;
         }
 
         public void RemoveIngredient(int ingredientId)
@@ -202,7 +211,7 @@ namespace PortoFlipPizzaSystem.Data
                 throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
             }
 
-            this.ingredients[ingredientId].Delete();
+            this.ingredients[ingredientId].IsDeleted = true;
         }
 
         public void RemoveOrder(int orderId)
@@ -212,7 +221,7 @@ namespace PortoFlipPizzaSystem.Data
                 throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
             }
 
-            this.orders[orderId].Delete();
+            this.orders[orderId].IsDeleted = true;
         }
 
         public void RemoveProduct(int productId)
@@ -222,7 +231,7 @@ namespace PortoFlipPizzaSystem.Data
                 throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
             }
 
-            this.products[productId].Delete();
+            this.Products[productId].IsDeleted = true;
         }
 
         public void RemoveStaff(int staffId)
@@ -232,7 +241,7 @@ namespace PortoFlipPizzaSystem.Data
                 throw new ArgumentException(TheGivenIdIsNotPresentInDictionary);
             }
 
-            this.staff[staffId].Delete();
+            this.staff[staffId].IsDeleted = true;
         }
     }
 }

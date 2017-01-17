@@ -6,7 +6,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
 {
     public class Customer : Person, IPerson, ICustomer, IDeletable, IIdentifiable
     {
-        private const decimal MAX_DISCOUNT = 20;
+        private const decimal MaxDiscount = 20;
         private decimal discount;
 
         public Customer(string firstName, string lastName, string address) 
@@ -31,7 +31,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
             {
                 if (value > 20)
                 {
-                    this.discount = MAX_DISCOUNT;
+                    this.discount = MaxDiscount;
                 }
                 else
                 {

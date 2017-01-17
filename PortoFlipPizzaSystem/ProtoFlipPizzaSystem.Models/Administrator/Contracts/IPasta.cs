@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProtoFlipPizzaSystem.Models.Contracts;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 {
-    public interface IPasta : IFood
+    public interface IPasta : IFood, IProduct, ICalculatable, IDeletable, IIdentifiable, INamable
     {
         decimal PastaPremium { get; }
 

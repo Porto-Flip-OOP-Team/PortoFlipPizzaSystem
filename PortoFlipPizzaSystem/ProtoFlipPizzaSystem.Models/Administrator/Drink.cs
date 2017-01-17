@@ -2,22 +2,20 @@
 
 using ProtoFlipPizzaSystem.Models.Administrator.Abstract;
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
-using ProtoFlipPizzaSystem.Models.Enums;
 using ProtoFlipPizzaSystem.Models.Contracts;
-using ProtoFlipPizzaSystem.Models.Validation;
+using ProtoFlipPizzaSystem.Models.Enums;
 using ProtoFlipPizzaSystem.Models.Utils;
+using ProtoFlipPizzaSystem.Models.Validation;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator
 {
     public class Drink : Product, IProduct, IDrink, ICalculatable, IDeletable, INamable
     {
         private const int MaxUnitQuantity = 1500;
-
+        private readonly MeasureUnitType measureUnitType;
         private decimal price;
         private int totalQuantity;
         private int unitQuantity;
-        private readonly MeasureUnitType measureUnitType;
-
 
         public Drink(string name, decimal price, int unitQuantity, int totalQuantity, MeasureUnitType measureUnitType)
             : base(name)
@@ -26,21 +24,6 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
             this.TotalQuantity = totalQuantity;
             this.measureUnitType = measureUnitType;
             this.UnitQuantity = unitQuantity;
-        }
-
-        private decimal Price
-        {
-            get
-            {
-                return this.price;
-            }
-
-            set
-            {
-                Validator.ValidateDecimalRange(value, GlobalConstants.MinPrice, GlobalConstants.MaxPrice, GlobalConstants.InvalidQuantity);
-
-                this.price = value;
-            }
         }
 
         public MeasureUnitType MeasureUnitType
@@ -60,9 +43,24 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
 
             private set
             {
-                string message = string.Format(GlobalConstants.InvalidQuantity, nameof(UnitQuantity), GlobalConstants.MinQuantity, MaxUnitQuantity);
+                string message = string.Format(GlobalConstants.InvalidQuantity, nameof(this.UnitQuantity), GlobalConstants.MinQuantity, MaxUnitQuantity);
                 Validator.ValidateDecimalRange(value, GlobalConstants.MinQuantity, MaxUnitQuantity, message);
                 this.unitQuantity = value;
+            }
+        }
+
+        private decimal Price
+        {
+            get
+            {
+                return this.price;
+            }
+
+            set
+            {
+                Validator.ValidateDecimalRange(value, GlobalConstants.MinPrice, GlobalConstants.MaxPrice, GlobalConstants.InvalidQuantity);
+
+                this.price = value;
             }
         }
 

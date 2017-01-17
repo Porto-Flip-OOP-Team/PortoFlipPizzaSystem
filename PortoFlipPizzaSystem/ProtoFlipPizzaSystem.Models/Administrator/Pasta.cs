@@ -2,14 +2,14 @@
 using System.Text;
 
 using ProtoFlipPizzaSystem.Models.Administrator.Abstract;
-using ProtoFlipPizzaSystem.Models.Administrator.Structures;
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+using ProtoFlipPizzaSystem.Models.Administrator.Structures;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator
 {
-    class Pasta : Food, IPasta
+    public class Pasta : Food, IPasta
     {
-        public Pasta(string name, List<ProductItem> ingredients) 
+        public Pasta(string name, List<ProductItem> ingredients)
             : base(name, ingredients)
         {
         }
@@ -27,14 +27,13 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
 
             foreach (var productItem in this.Ingredients)
             {
-                price += (productItem.Igredient.CalculatePrice() * productItem.Quantity);
+                price += productItem.Igredient.CalculatePrice() * productItem.Quantity;
             }
 
-            price += price * PastaPremium;
+            price += price * this.PastaPremium;
 
             return price;
         }
-
 
         public override string ToString()
         {

@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using ProtoFlipPizzaSystem.Models.Contracts;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator.Contracts
 {
-    interface IPizza : IFood
+    public interface IPizza : IProduct, IFood, ICalculatable, IDeletable, IIdentifiable, INamable
     {
         void SetPizzaPremium(decimal pizzaPremium);
+
         void SetCoeff(decimal coeff);
     }
 }

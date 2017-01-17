@@ -1,7 +1,7 @@
-﻿using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
-using ProtoFlipPizzaSystem.Models.Enums;
-using ProtoFlipPizzaSystem.Models.Administrator.Abstract;
+﻿using ProtoFlipPizzaSystem.Models.Administrator.Abstract;
+using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
 using ProtoFlipPizzaSystem.Models.Contracts;
+using ProtoFlipPizzaSystem.Models.Enums;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator
 {

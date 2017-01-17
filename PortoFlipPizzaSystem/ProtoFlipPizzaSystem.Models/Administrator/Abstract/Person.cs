@@ -6,14 +6,12 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
 {
     public abstract class Person : IdentifiableObject, IPerson, IDeletable
     {
-        private bool isDeleted;
-
         public Person(string firstName, string lastName, string address)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
             this.Address = address;
-            this.isDeleted = false;
+            this.IsDeleted = false;
         }
 
         public string FirstName { get; private set; }
@@ -22,9 +20,6 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
 
         public string Address { get; set; }
 
-        public void Delete()
-        {
-            this.isDeleted = true;
-        }
+        public bool IsDeleted { get;  set; }
     }
 }

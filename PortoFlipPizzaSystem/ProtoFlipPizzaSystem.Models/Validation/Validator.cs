@@ -102,10 +102,5 @@ namespace ProtoFlipPizzaSystem.Models.Validation
                 throw new ArgumentNullException(message);
             }
         }
-
-        //public static void ValidateStringLength(string value, int minLength, int maxLength, string message)
-        //{
-
-        //}
     }
 }

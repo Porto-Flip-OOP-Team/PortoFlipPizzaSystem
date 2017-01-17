@@ -68,8 +68,7 @@
     <Compile Include="Contracts\IDeletable.cs" />
     <Compile Include="Contracts\IIdentifiable.cs" />
     <Compile Include="Contracts\INamable.cs" />
-    <Compile Include="Contracts\IPriceble.cs" />
-    <Compile Include="Contracts\IQuantable.cs" />
+    <Compile Include="Contracts\.cs" />
     <Compile Include="Enums\WorkPositionType.cs" />
     <Compile Include="Administrator\Staff.cs" />
     <Compile Include="Administrator\Contracts\ICustomer.cs" />

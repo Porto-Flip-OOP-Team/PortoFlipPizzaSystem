@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
-using ProtoFlipPizzaSystem.Models.Contracts;
 using ProtoFlipPizzaSystem.Models.Client.Structures;
+using ProtoFlipPizzaSystem.Models.Contracts;
 
 namespace ProtoFlipPizzaSystem.Models.Client.Contracts
 {
@@ -9,9 +9,6 @@ namespace ProtoFlipPizzaSystem.Models.Client.Contracts
     {
         List<OrderItem> Products { get; }
 
-        bool IsDeleted { get; }
-
         decimal CalculateTotalOrderPrice();
-
     }
 }

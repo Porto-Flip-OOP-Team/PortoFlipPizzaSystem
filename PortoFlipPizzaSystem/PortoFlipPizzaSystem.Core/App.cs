@@ -1,10 +1,11 @@
-﻿using PortoFlipPizzaSystem.Core.Contracts;
+﻿using System;
+using System.Linq;
+
+using PortoFlipPizzaSystem.Core.Contracts;
 using PortoFlipPizzaSystem.Data;
 using PortoFlipPizzaSystem.Data.Contracts;
 using ProtoFlipPizzaSystem.Models.Administrator;
 using ProtoFlipPizzaSystem.Models.Enums;
-using System;
-using System.Linq;
 
 namespace PortoFlipPizzaSystem.Core
 {
@@ -29,14 +30,14 @@ namespace PortoFlipPizzaSystem.Core
             {
                 try
                 {
-                    string commandLine = ReadCommand();
+                    string commandLine = this.ReadCommand();
 
                     if (string.IsNullOrEmpty(commandLine))
                     {
                         throw new ArgumentOutOfRangeException("Command line cannot be empty!");
                     }
 
-                    string[] tokens = ParseCommand(commandLine);
+                    string[] tokens = this.ParseCommand(commandLine);
 
                     string command = tokens[0];
                     string[] parameters = tokens.Skip(1).ToArray();
@@ -45,7 +46,6 @@ namespace PortoFlipPizzaSystem.Core
 
                     Console.WriteLine(commandResult);
                 }
-
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
@@ -87,11 +87,11 @@ namespace PortoFlipPizzaSystem.Core
                     var successfulDrinkResult = $"Drink with name {drink.Name} and Id {drink.Id} was successfully created!";
 
                     return successfulDrinkResult;
-                    
+
                 case "CreateIngredient":
-                     var ingredientName = parameters[0];
-                     var ingredientPrice = decimal.Parse(parameters[1]);
-                     var ingredientUnitQuantity = int.Parse(parameters[2]);
+                    var ingredientName = parameters[0];
+                    var ingredientPrice = decimal.Parse(parameters[1]);
+                    var ingredientUnitQuantity = int.Parse(parameters[2]);
 
                     MeasureUnitType parsedIngredientMeasureUnit;
                     Enum.TryParse<MeasureUnitType>(parameters[3], out parsedIngredientMeasureUnit);

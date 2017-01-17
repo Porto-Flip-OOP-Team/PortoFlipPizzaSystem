@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Collections.Generic;
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
 using ProtoFlipPizzaSystem.Models.Administrator.Structures;
 
@@ -11,10 +6,9 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
 {
     public abstract class Pizza : Food, IPizza
     {
-        public Pizza(string name, List<ProductItem> ingredients) 
+        public Pizza(string name, List<ProductItem> ingredients)
             : base(name, ingredients)
         {
-
         }
 
         public decimal PizzaPremium { get; private set; } = 1.2M;
@@ -37,10 +31,10 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
 
             foreach (var productItem in this.Ingredients)
             {
-                price += (productItem.Igredient.CalculatePrice() * productItem.Quantity);
+                price += productItem.Igredient.CalculatePrice() * productItem.Quantity;
             }
 
-            price += (price * (PizzaPremium + Coeff));
+            price += price * (this.PizzaPremium + this.Coeff);
 
             return price;
         }

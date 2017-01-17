@@ -1,22 +1,21 @@
-﻿using System;
-
-using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+﻿using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
+using ProtoFlipPizzaSystem.Models.Common;
 using ProtoFlipPizzaSystem.Models.Enums;
 using ProtoFlipPizzaSystem.Models.Validation;
-using ProtoFlipPizzaSystem.Models.Common;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator
 {
     public class Ingredient : IdentifiableObject, IIngredient
     {
-        string name;
+        private string name;
 
         public Ingredient(string name, decimal unitPrice, decimal quantity, MeasureUnitType unitType)
         {
             this.Name = name;
             this.UnitPrice = unitPrice;
-            this.UnitType = unitType; 
+            this.UnitType = unitType;
             this.Quantity = quantity;
+            this.IsDeleted = false;
         }
 
         public string Name
@@ -25,6 +24,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
             {
                 return this.name;
             }
+
             set
             {
                 Validator.ValidateSymbols("sOmething", "^[a-zA-Z]+$", "Invalid ingredient");
@@ -34,16 +34,11 @@ namespace ProtoFlipPizzaSystem.Models.Administrator
 
         public MeasureUnitType UnitType { get; private set; }
 
-        public bool IsDeleted { get; private set; } = false;
+        public bool IsDeleted { get; set; } 
 
-        public decimal Quantity { get;  set; }
+        public decimal Quantity { get; set; }
 
         public decimal UnitPrice { get; private set; }
-
-        public void Delete()
-        {
-            this.IsDeleted = true;
-        }
 
         public decimal CalculatePrice()
         {

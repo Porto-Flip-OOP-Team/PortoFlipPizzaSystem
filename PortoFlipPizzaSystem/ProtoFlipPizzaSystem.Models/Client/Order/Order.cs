@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
 using ProtoFlipPizzaSystem.Models.Client.Contracts;
@@ -11,9 +12,10 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
         public Order(List<OrderItem> products, int quantity)
         {
             this.Products = products;
+            this.IsDeleted = false;
         }
 
-        public bool IsDeleted { get; private set; } = false;
+        public bool IsDeleted { get; set; }
 
         public List<OrderItem> Products { get; private set; }
 
@@ -31,16 +33,12 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
         public decimal CalculateTotalOrderPrice()
         {
             decimal sum = 0;
-            foreach (var product in Products)
+            foreach (var product in this.Products)
             {
                 sum += product.Quantity * product.OrderProduct.CalculatePrice();
             }
-            return sum;
-        }
 
-        public void Delete()
-        {
-            this.IsDeleted = true;
+            return sum;
         }
     }
 }

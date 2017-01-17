@@ -1,7 +1,7 @@
 ﻿using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
-using ProtoFlipPizzaSystem.Models.Validation;
-using ProtoFlipPizzaSystem.Models.Utils;
 using ProtoFlipPizzaSystem.Models.Common;
+using ProtoFlipPizzaSystem.Models.Utils;
+using ProtoFlipPizzaSystem.Models.Validation;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
 {
@@ -34,7 +34,7 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
             }
         }
 
-        // public bool IsDeleted { get; private set; } = false;
+         public bool IsDeleted { get; set; }
 
         public int TotalQuantity
         {
@@ -45,18 +45,13 @@ namespace ProtoFlipPizzaSystem.Models.Administrator.Abstract
 
             set
             {
-                string message = string.Format(GlobalConstants.InvalidQuantity, nameof(TotalQuantity), GlobalConstants.MinQuantity, GlobalConstants.MaxTotalQuantity);
+                string message = string.Format(GlobalConstants.InvalidQuantity, nameof(this.TotalQuantity), GlobalConstants.MinQuantity, GlobalConstants.MaxTotalQuantity);
                 Validator.ValidateIntRange(value, GlobalConstants.MinQuantity, GlobalConstants.MaxTotalQuantity, message);
                 this.totalQuantity = value;
             }
         }
 
         public abstract decimal CalculatePrice();
-
-        public void Delete()
-        {
-            this.isDeleted = true;
-        }
 
         public virtual void UpdateTotalQuantity(int newQuantity)
         {

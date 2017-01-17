@@ -5,7 +5,7 @@ using ProtoFlipPizzaSystem.Models.Client.Structures;
 
 namespace ProtoFlipPizzaSystem.Models.Client.Order
 {
-    class OnlineOrder : Order
+   public class OnlineOrder : Order
     {
         public OnlineOrder(List<OrderItem> products, int quantity, string comment) : base(products, quantity)
         {
@@ -14,6 +14,7 @@ namespace ProtoFlipPizzaSystem.Models.Client.Order
         }
 
         public string Comment { get; private set; }
+
         public DateTime Time { get; private set; }
     }
 }
