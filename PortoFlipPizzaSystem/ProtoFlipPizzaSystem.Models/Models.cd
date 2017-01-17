@@ -1,112 +1,297 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.Abstract.Person" Collapsed="true">
-    <Position X="2.25" Y="3" Width="1.5" />
+  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.Abstract.Food" Collapsed="true">
+    <Position X="11.75" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAEAAAAAAAAAAAAAAAAAQQAAIAAACAAIAAAACAAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAIAAAIAAAACAAAAAAAAAAAAAAAIAAQgA=</HashCode>
+      <FileName>Administrator\Abstract\Food.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.Abstract.Person" Collapsed="true">
+    <Position X="2.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAQAAAAg=</HashCode>
       <FileName>Administrator\Abstract\Person.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.Customer" Collapsed="true">
-    <Position X="1" Y="4.25" Width="1.5" />
+  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.Abstract.Pizza" Collapsed="true">
+    <Position X="10.5" Y="11.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAgAAAAIAAAA=</HashCode>
+      <HashCode>AAAAAAEAAAAAAAAQIAAAAAAAAAAAAAIAAAAAAAAAAIA=</HashCode>
+      <FileName>Administrator\Abstract\Pizza.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.Abstract.Product" Collapsed="true">
+    <Position X="12.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAYBAEAEAQAAAAA=</HashCode>
+      <FileName>Administrator\Abstract\Product.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.Customer" Collapsed="true">
+    <Position X="1.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAgAAAAIAAAA=</HashCode>
       <FileName>Administrator\Customer.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.Staff" Collapsed="true">
-    <Position X="3.25" Y="4.25" Width="1.5" />
+  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.Drink" Collapsed="true">
+    <Position X="17.25" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>KAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <HashCode>ABABAAAQAQAAAAAEAAAAQAAAAEAAAAIAAAAEAAAAAAQ=</HashCode>
+      <FileName>Administrator\Drink.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.Ingredient" Collapsed="true">
+    <Position X="6" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAQAAAAEBAIAAAAAgQAAAAA=</HashCode>
+      <FileName>Administrator\Ingredient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.LargePizza" Collapsed="true">
+    <Position X="8.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Administrator\LargePizza.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.MiddlePizza" Collapsed="true">
+    <Position X="10.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAEAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Administrator\MiddlePizza.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.Pasta" Collapsed="true">
+    <Position X="15" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEAAAAAAAAAACAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Administrator\Pasta.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.SmallPizza" Collapsed="true">
+    <Position X="12.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAQAAAAAAIAAAIAAAA=</HashCode>
+      <FileName>Administrator\SmallPizza.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Administrator.Staff" Collapsed="true">
+    <Position X="3.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
       <FileName>Administrator\Staff.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ProtoFlipPizzaSystem.Models.Client.Order.Order" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="10.25" Y="0.5" Width="1.5" />
+  <Class Name="ProtoFlipPizzaSystem.Models.Client.Order.OfflineOrder" Collapsed="true">
+    <Position X="0.75" Y="12.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAgAAAAgAAAAAAAAAAAAAAACAAAAAgAAAIAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Client\Order\OfflineOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Client.Order.OnlineOrder" Collapsed="true">
+    <Position X="3" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Client\Order\OnlineOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Client.Order.Order" Collapsed="true">
+    <Position X="2" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAQAgAAACAAAAAAAAAAQAAAAQ=</HashCode>
       <FileName>Client\Order\Order.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Common.IdentifiableObject" Collapsed="true">
+    <Position X="9.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Common\IdentifiableObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Exceptions.InvalidMenuItemException" Collapsed="true">
+    <Position X="27.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\InvalidMenuItemException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Exceptions.InvalidOrderQuantityException" Collapsed="true">
+    <Position X="24" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\InvalidOrderQuantityException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Utils.DataGenerator" Collapsed="true">
+    <Position X="24" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\DataGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Utils.GlobalConstants" Collapsed="true">
+    <Position X="25.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAIAAAACAAAAAAAAAAAgAAAAAAAAAAAAAABIAAIQA=</HashCode>
+      <FileName>Utils\GlobalConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProtoFlipPizzaSystem.Models.Validation.Validator" Collapsed="true">
+    <Position X="25.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAEAAQAAAAAAAAIAAAAABAAAAAAAAAABAEA=</HashCode>
+      <FileName>Validation\Validator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ProtoFlipPizzaSystem.Models.Administrator.Structures.ProductItem" Collapsed="true">
+    <Position X="25.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Administrator\Structures\ProductItem.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ProtoFlipPizzaSystem.Models.Client.Structures.OrderItem" Collapsed="true">
+    <Position X="24" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAgAAAAAA=</HashCode>
+      <FileName>Client\Structures\OrderItem.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
   <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contracts.ICustomer" Collapsed="true">
-    <Position X="5.75" Y="4.25" Width="1.5" />
+    <Position X="3.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Administrator\Contracts\ICustomer.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contracts.IPerson" Collapsed="true">
-    <Position X="6.5" Y="3" Width="1.5" />
+  <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contracts.IDrink" Collapsed="true">
+    <Position X="7" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAACAAIAAAAAAAg=</HashCode>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Administrator\Contracts\IDrink.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contracts.IFood" Collapsed="true">
+    <Position X="4.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAACAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Administrator\Contracts\IFood.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contracts.IIngredient" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Administrator\Contracts\IIngredient.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contracts.IPasta" Collapsed="true">
+    <Position X="9.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Administrator\Contracts\IPasta.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contracts.IPerson" Collapsed="true">
+    <Position X="6.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAg=</HashCode>
       <FileName>Administrator\Contracts\IPerson.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contracts.IPizza" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Administrator\Contracts\IPizza.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contracts.IProduct" Collapsed="true">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAEAAAAAAAAA=</HashCode>
+      <FileName>Administrator\Contracts\IProduct.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contracts.IStaff" Collapsed="true">
-    <Position X="7.5" Y="4.25" Width="1.5" />
+    <Position X="0.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
       <FileName>Administrator\Contracts\IStaff.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contacts.IDrink" Collapsed="true">
-    <Position X="0.5" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Administrator\Contracts\IDrink.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contacts.IFood" Collapsed="true">
-    <Position X="2.75" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Administrator\Contracts\IFood.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contacts.IIgredient" Collapsed="true">
-    <Position X="12" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAEAQAAAAARAAAAAAAgAAAAAA=</HashCode>
-      <FileName>Administrator\Contracts\IIgredient.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contacts.IMenu" Collapsed="true">
-    <Position X="10.25" Y="2.5" Width="1.5" />
+    <Position X="24" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Administrator\Contracts\IMenu.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProtoFlipPizzaSystem.Models.Administrator.Contacts.IProduct" Collapsed="true">
-    <Position X="1.75" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Administrator\Contracts\IProduct.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Interface Name="ProtoFlipPizzaSystem.Models.Client.Contracts.IOrder" Collapsed="true">
-    <Position X="12" Y="2.5" Width="1.5" />
+    <Position X="18.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAgAAAIAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Client\Contracts\IOrder.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="ProtoFlipPizzaSystem.Models.Enums.TypeWorkPosition" Collapsed="true">
-    <Position X="10.25" Y="3.5" Width="1.5" />
+  <Interface Name="ProtoFlipPizzaSystem.Models.Contracts.ICalculatable" Collapsed="true">
+    <Position X="15.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAAAAAAAAAAAAA=</HashCode>
-      <FileName>Enums\TypeWorkPosition.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\ICalculatable.cs</FileName>
     </TypeIdentifier>
-  </Enum>
-  <Enum Name="ProtoFlipPizzaSystem.Models.Enums.UnitType" Collapsed="true">
-    <Position X="12" Y="3.5" Width="1.5" />
+  </Interface>
+  <Interface Name="ProtoFlipPizzaSystem.Models.Contracts.IDeletable" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Contracts\IDeletable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProtoFlipPizzaSystem.Models.Contracts.IIdentifiable" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IIdentifiable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProtoFlipPizzaSystem.Models.Contracts.INamable" Collapsed="true">
+    <Position X="19" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\INamable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ProtoFlipPizzaSystem.Models.Enums.MeasureUnitType" Collapsed="true">
+    <Position X="24" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAQAAAAAAAABAAAAAAAAAAAAEAAABAAAIAAAAgA=</HashCode>
-      <FileName>Enums\UnitType.cs</FileName>
+      <FileName>Enums\MeasureUnitType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ProtoFlipPizzaSystem.Models.Enums.WorkPositionType" Collapsed="true">
+    <Position X="25.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\WorkPositionType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />
