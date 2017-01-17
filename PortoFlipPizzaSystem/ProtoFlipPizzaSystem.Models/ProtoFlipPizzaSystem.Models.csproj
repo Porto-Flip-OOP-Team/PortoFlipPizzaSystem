@@ -68,7 +68,6 @@
     <Compile Include="Contracts\IDeletable.cs" />
     <Compile Include="Contracts\IIdentifiable.cs" />
     <Compile Include="Contracts\INamable.cs" />
-    <Compile Include="Contracts\.cs" />
     <Compile Include="Enums\WorkPositionType.cs" />
     <Compile Include="Administrator\Staff.cs" />
     <Compile Include="Administrator\Contracts\ICustomer.cs" />
@@ -94,9 +93,7 @@
     <None Include="Models.cd" />
     <None Include="Settings.StyleCop" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Client\Abstract\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

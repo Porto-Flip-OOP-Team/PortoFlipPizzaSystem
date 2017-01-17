@@ -1,11 +1,12 @@
 ﻿using ProtoFlipPizzaSystem.Models.Administrator.Contracts;
 using ProtoFlipPizzaSystem.Models.Common;
+using ProtoFlipPizzaSystem.Models.Contracts;
 using ProtoFlipPizzaSystem.Models.Enums;
 using ProtoFlipPizzaSystem.Models.Validation;
 
 namespace ProtoFlipPizzaSystem.Models.Administrator
 {
-    public class Ingredient : IdentifiableObject, IIngredient
+    public class Ingredient : IdentifiableObject, IIngredient, IDeletable, IIdentifiable, INamable
     {
         private string name;
 
